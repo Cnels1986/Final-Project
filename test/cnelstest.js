@@ -60,3 +60,31 @@ function frame() {
 //     document.getElementById('nextButton').classList.remove("greyOut");
 //   }
 // });
+
+var bar = new ProgressBar.Circle(circle, {
+  strokeWidth: 5,
+  trailWidth: 5,
+  easing: 'easeInOut',
+  duration: 1400,
+  color: '#33c7ba',
+  from: { color: '#d8d8d8', width: 5},
+  to: { color: '#33c7ba', width: 5 },
+  //svgStyle: null
+
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 0) {
+      circle.setText('00');
+    } else {
+      circle.setText(value + "%\nof class\ncompleted");
+    }
+
+  }
+});
+
+//bar.text.style.fontFamily = '"Montserrat", sans-serif;';
+//bar.text.style.fontSize = '30px';
+bar.animate(.69);
