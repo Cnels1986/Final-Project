@@ -1,0 +1,8 @@
+body{
+  display: flex;
+  flex-direction: row;
+  .headerBodyFlex{
+    display: flex;
+    flex-direction: column;
+  }
+}
