@@ -8,7 +8,6 @@
   <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-  <!-- <div class="border"> -->
   <div class="bigFlex">
     <aside>
       <div>
@@ -17,10 +16,10 @@
       <h1>Son Goku</h1>
       <h2>ACADEMIC SERVICES</h2>
       <ul>
-        <li class="active">
+        <li>
           <a href="">Current Schedule</a>
         </li>
-        <li>
+        <li class="active">
           <a href="">Grades &amp; Reporting</a>
         </li>
         <li>
@@ -39,7 +38,7 @@
       <header>
         <section>
           <h5>
-            <a href="index.html">HOME</a>
+            <a href="../index.html">HOME</a>
           </h5>
           <div id="date"></div>
           <h5><a href="/">LOG OUT?</a></h5>
@@ -71,79 +70,97 @@
         <h2 class="mainHeader">ENROLLED COURSES:</h2>
         <!-- first class -->
         <article class="course">
-          <h2>CSET 105, M, 12:00pm - 4:30pm</h2>
-          <h3>Intro to Web Applications</h3>
-          <div class="grade">
-            <h3>CURRENT GRADE</h3>
-            <p>90%</p>
+          <div class="courseInfo">
+            <div class="class">
+              <h2>CSET 105, M, 12:00pm - 4:30pm</h2>
+              <h3>Intro to Web Applications</h3>
+            </div>
+            <div class="grade">
+              <h3>CURRENT GRADE</h3>
+              <p>90%</p>
+            </div>
           </div>
 
-          <div class="courseCompleted">
-            <!-- will contain circle progress bar -->
-            <h4>START DATE:</h4>
-            <p>August 20, 2017</p>
-            <h4>END DATE:</h4>
-            <p>December 15, 2017</p>
-          </div>
+          <div class="courseFlex">
+            <div class="courseCompleted">
+              <div class="circle1" value="40"></div>
+              <div class="courseDates">
+                <h4>START DATE:</h4>
+                <p>August 20, 2017</p>
+                <h4>END DATE:</h4>
+                <p>December 15, 2017</p>
+              </div>
+            </div>
 
-          <div>
-            <h2>RECENTLY GRADED:</h2>
-            <table>
-              <tr>
-                <td>HTML & CSS #2 Project</td>
-                <td>90%</td>
-              </tr>
-              <tr>
-                <td>CSS Test</td>
-                <td>85%</td>
-              </tr>
-              <tr>
-                <td>Tech Talk #2</td>
-                <td>100%</td>
-              </tr>
-            </table>
+            <div class="gradesList">
+              <h2>RECENTLY GRADED:</h2>
+              <table>
+                <tr>
+                  <td>HTML & CSS #2 Project</td>
+                  <td>90%</td>
+                </tr>
+                <tr>
+                  <td>CSS Test</td>
+                  <td>85%</td>
+                </tr>
+                <tr>
+                  <td>Tech Talk #2</td>
+                  <td>100%</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </article>
 
         <!-- second class -->
         <article class="course">
-          <h2>CSET 110, T, 12:00pm - 4:30pm & W, 12:30pm - 4:30pm</h2>
-          <h3>Web Development I</h3>
-          <div class="grade">
-            <h3>CURRENT GRADE</h3>
-            <p>80%</p>
+          <div class="courseInfo">
+            <div class="class">
+              <h2>CSET 110, T, 12:00pm - 4:30pm & W, 12:30pm - 4:30pm</h2>
+              <h3>Web Development I</h3>
+            </div>
+            <div class="grade">
+              <h3>CURRENT GRADE</h3>
+              <p>80%</p>
+            </div>
           </div>
 
-          <div class="courseCompleted">
-            <!-- will contain circle progress bar -->
-            <h4>START DATE:</h4>
-            <p>August 20, 2017</p>
-            <h4>END DATE:</h4>
-            <p>December 15, 2017</p>
-          </div>
+          <div class="courseFlex">
+            <div class="courseCompleted">
+              <div class="circle2" value="40"></div>
+              <div class="courseDates">
+                <h4>START DATE:</h4>
+                <p>August 20, 2017</p>
+                <h4>END DATE:</h4>
+                <p>December 15, 2017</p>
+              </div>
+            </div>
 
-          <div>
-            <h2>RECENTLY GRADED:</h2>
-            <table>
-              <tr>
-                <td>HTML & CSS #2 Project</td>
-                <td>90%</td>
-              </tr>
-              <tr>
-                <td>CSS Test</td>
-                <td>85%</td>
-              </tr>
-              <tr>
-                <td>Tech Talk #2</td>
-                <td>100%</td>
-              </tr>
-            </table>
+            <div class="gradesList">
+              <h2>RECENTLY GRADED:</h2>
+              <table>
+                <tr>
+                  <td>HTML & CSS #2 Project</td>
+                  <td>90%</td>
+                </tr>
+                <tr>
+                  <td>CSS Test</td>
+                  <td>85%</td>
+                </tr>
+                <tr>
+                  <td>Tech Talk #2</td>
+                  <td>100%</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </article>
       </div>
     </div>
   </div>
-  <!-- </div> -->
+
+  <script src="../jquery-3.2.1.js"></script>
+  <script src="../progressbar.js"></script>
   <script src="../file.js"></script>
 </body>
 </html>

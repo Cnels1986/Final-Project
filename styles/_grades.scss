@@ -8,8 +8,6 @@
   font-size: $size;
 }
 
-
-
 .blueBar{
   width: 91%;
   height: 2px;
@@ -23,30 +21,34 @@
   padding: 17px 0 10px 3.6%;
 }
 
+.courseInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: stretch;
+}
+
 .course{
   h2{
     @include  text($mont, $headerSubHeader, 12px);
     line-height: 1.75;
     font-weight: bold;
-
-    padding-left: 3.6%
+    padding-left: 15%;
   }
-
   h3{
     @include text($mont, $headerBlack, 15px);
-    padding-left: 3.6%;
+    padding-left: 15%;
     padding-bottom: 20px;
   }
 }
 
 .grade{
-  float: right;
   height: 70px;
   width: 115px;
   background-color: white;
   font-weight: bold;
   text-align: center;
-
+  margin-right: 10.8%;
   h3{
     @include text($mont, $gradesHeader, 10px);
     margin: 10px;
@@ -57,13 +59,71 @@
   }
 }
 
+.courseFlex{
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  padding: 20px 0 60px 0;
+}
+
 .courseCompleted{
-  height: 190px;
+  height: 180px;
   width: 345px;
   background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin-left: 3.6%;
+  h4{
+    @include text($mont, $gradesHeader, 10px);
+    font-weight: bold;
+    padding-bottom: 7px;
+  }
+  p{
+    @include text($mont, $textBlack, 12px);
+    font-weight: lighter;
+    padding-bottom: 35px;
+  }
+  section{
+    float: right;
+    padding: 45px 25px;
+  }
+}
+
+.gradesList{
+  padding: 20px 0 0 40px;
+  h2{
+    @include text($mont, $gradesHeader, 10px);
+    padding-left: 0;
+  }
+  td{
+    @include text($mont, $grades, 12px);
+    font-weight: lighter;
+    padding: 6px 70px 0 0 ;
+  }
+
 }
 
 .content{
   overflow-y: auto;
-  width: 195%;
+  // formats the scroll bar for the content section
+  ::-webkit-scrollbar-track {
+      background-color: $whiteText;
+  }
+  ::-webkit-scrollbar-thumb {
+  background-color: $scrollbar;
+  }
+}
+
+.circle1, .circle2{
+    height: 150px;
+    width: 150px;
+    padding: 25px 0 20px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.courseDates{
+  width: 50%;
+  padding: 50px 0 0 45px;
 }
