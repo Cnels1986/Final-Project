@@ -11,10 +11,15 @@
 .bigFlex{
   display: flex;
   flex-direction: row;
-  width: 45em;
+  width: 64em;
+  height: 48em;
 
   background-color: $whiteText;
   margin: 0 auto;
+
+  border: 24px solid;
+  border-image-source: linear-gradient(126deg, #2fcfba, #47a1ba);
+  border-image-slice: 20;
   .smallFlex{
     display: flex;
     flex-direction: column;
