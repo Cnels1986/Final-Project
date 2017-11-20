@@ -1,7 +1,21 @@
-body{
+// body{
+//   display: flex;
+//   flex-direction: row;
+//   .headerBodyFlex{
+//     display: flex;
+//     flex-direction: column;
+//     background-color: $whiteText;
+//     width: 45em;
+//   }
+// }
+.bigFlex{
   display: flex;
   flex-direction: row;
-  .headerBodyFlex{
+  width: 45em;
+
+  background-color: $whiteText;
+  margin: 0 auto;
+  .smallFlex{
     display: flex;
     flex-direction: column;
   }
