@@ -1,0 +1,64 @@
+@import "variables";
+
+
+// Takes in font variable, color variable, font size
+@mixin text($font, $color, $size){
+  font-family: $font;
+  color: $color;
+  font-size: $size;
+}
+
+
+
+.blueBar{
+  width: 91%;
+  height: 2px;
+  background-color: $bluish;
+}
+
+.mainHeader{
+  @include text($mont, $headerHeader, 12px);
+  font-weight: bold;
+
+  padding: 17px 0 10px 3.6%;
+}
+
+.course{
+  h2{
+    @include  text($mont, $headerSubHeader, 12px);
+    line-height: 1.75;
+    font-weight: bold;
+
+    padding-left: 3.6%
+  }
+
+  h3{
+    @include text($mont, $headerBlack, 15px);
+    padding-left: 3.6%;
+    padding-bottom: 20px;
+  }
+}
+
+.grade{
+  float: right;
+  height: 70px;
+  width: 115px;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+
+  h3{
+    @include text($mont, $gradesHeader, 10px);
+    margin: 10px;
+    padding-bottom: 0;
+  }
+  p{
+    @include text($mont, $grades, 30px);
+  }
+}
+
+.courseCompleted{
+  height: 190px;
+  width: 345px;
+  background-color: white;
+}

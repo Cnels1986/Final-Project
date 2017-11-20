@@ -2,3 +2,18 @@
 @import "aside";
 @import "variables";
 @import "flex";
+@import "header";
+@import "grades";
+
+.border{
+  min-width: 960px;
+  max-width: 1600px;
+  background-color: linear-gradient(126deg, #2fcfba, #47a1ba);
+  width: 1024px;
+}
+//
+// .container{
+//   background-color: whiteText;
+//   height: 94%;
+//   width: 94%;
+// }
