@@ -11,7 +11,7 @@
   @include text($mont, $headerHeader, 12px);
   font-weight: bold;
 
-  padding: 17px 0 10px 3.6%;
+  padding: 17px 0 10px 0;
 }
 
 .courseInfo{
@@ -29,11 +29,9 @@
     @include  text($mont, $headerSubHeader, 12px);
     line-height: 1.75;
     font-weight: bold;
-    padding-left: 15%;
   }
   h3{
     @include text($mont, $headerBlack, 15px);
-    padding-left: 15%;
     padding-bottom: 20px;
   }
 }
@@ -68,7 +66,6 @@
   background-color: white;
   display: flex;
   flex-direction: row;
-  margin-left: 3.6%;
   h4{
     @include text($mont, $gradesHeader, 10px);
     font-weight: bold;
