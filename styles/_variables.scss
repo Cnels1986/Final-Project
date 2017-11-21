@@ -38,4 +38,10 @@ $scrollbar: #38bfba;
 // margins
 $asideLeft: 10%;
 $left: 4%;
-$right: 5.5%;   //MAY NOT NEEDÅ
+$right: 5.5%;   //MAY NOT NEED
+
+@mixin text($font, $color, $size){
+  font-family: $font;
+  color: $color;
+  font-size: $size;
+}
