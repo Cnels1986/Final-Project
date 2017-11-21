@@ -1,0 +1,51 @@
+@import "variables";
+
+
+// Takes in font variable, color variable, font size
+@mixin text($font, $color, $size){
+  font-family: $font;
+  color: $color;
+  font-size: $size;
+}
+
+.scheduleNav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  h2, ul{
+    flex-grow: 20;
+  }
+  ul{
+    @include text($mont, $headerSubHeader, 10px);
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 17px;
+  }
+  li{
+    display: inline;
+    padding-right: 20px;
+  }
+  span{
+    padding-right: 20px;
+  }
+  a{
+    text-decoration: none;
+    color: $headerSubHeader;
+  }
+}
+
+.schedule{
+  padding: 10px 0 0 3.6%;
+
+  h3{
+    @include text($mont, $headerSubHeader, 12px);
+    font-weight: bold;
+    padding: 7px 0;
+  }
+  h4{
+    @include text($mont, $headerBlack, 15px);
+    padding-bottom: 15px;
+  }
+}
