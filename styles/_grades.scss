@@ -8,14 +8,6 @@
   font-size: $size;
 }
 
-
-
-.blueBar{
-  width: 91%;
-  height: 2px;
-  background-color: $bluish;
-}
-
 .mainHeader{
   @include text($mont, $headerHeader, 12px);
   font-weight: bold;
@@ -65,5 +57,5 @@
 
 .content{
   overflow-y: auto;
-  width: 195%;
+  // width: 195%;
 }
