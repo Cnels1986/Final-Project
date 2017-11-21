@@ -11,7 +11,9 @@
 .bigFlex{
   display: flex;
   flex-direction: row;
-  width: 64em;
+  // width: 64em;
+  min-width: 60em;
+  max-width: 100em;
   height: 48em;
 
   background-color: $whiteText;
@@ -25,5 +27,6 @@
     flex-direction: column;
     width: 75%;
     padding: 2.5%;
+
   }
 }
