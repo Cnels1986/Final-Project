@@ -52,51 +52,71 @@
 }
 
 .calendar{
- width: 90.5%;
- height: 375px;
- margin: 0 auto;
- background-color: $calendar;
- display: flex;
- flex-direction: row;
+  width: 90.5%;
+  height: 375px;
+  margin: 0 auto;
+  background-color: $calendar;
+  display: flex;
+  flex-direction: row;
 
- .dayCol{
-   width: 132px;
-   height: 375px;
-   border: 1px solid $whiteText;
+  .dayCol{
+    width: 20%;
+    height: 375px;
+    border: 1px solid $whiteText;
+  }
 
-   p{
-     @include text($mont, $headerSubHeader, 10px);
-     text-align: center;
-     padding: 12px 0 17px 0;
-   }
- }
+    // text for the day of the week
+  .dayOfWeek{
+    @include text($mont, $headerSubHeader, 10px);
+    text-align: center;
+    padding: 12px 0 17px 0;
+  }
+  .firstClass{
+    height: 60px;
+    background-color: $dateColor;
 
- .firstClass{
-   height: 60px;
-   background-color: $dateColor;
+    p{
+      @include text($mont, $whiteText, 10px);
+      text-align: center;
+      padding: 3px;
+    }
+    p:nth-child(1){
+      font-size: 8px;
+      padding-top: 15px;
+    }
+  }
 
-   p{
-     @include text($mont, $whiteText, 10px);
-     text-align: center;
-     padding: 3px;
-   }
-   p:nth-child(1){
-     font-size: 8px;
-     padding-top: 15px;
-   }
- }
+  .csetClass{
+    height: 177px;
+    margin-top: 78px;
+    background-color: $dateColor;
 
- .csetClass{
-   height: 177px;
-   margin-top: 78px;
-   background-color: $dateColor;
-     .csetClassShort{
-       height: 162px;
-       margin-top: 93px;
-       background-color: $dateColor;
-     }
-     .csetClassFriday{
-       margin-top: 138px;
-     }
+    p{
+      @include text($mont, $whiteText, 10px);
+      text-align: center;
+      padding: 5px;
+    }
+    p:nth-child(1){
+      font-size: 8px;
+      padding-top: 60px;
+    }
+  }
+  .csetClassShort{
+    height: 162px;
+    margin-top: 93px;
+    background-color: $dateColor;
+
+    p{
+      @include text($mont, $whiteText, 10px);
+      text-align: center;
+      padding: 5px;
+    }
+    p:nth-child(1){
+      font-size: 8px;
+      padding-top: 45px;
+    }
+  }
+  .csetClassFriday{
+    margin-top: 138px;
   }
 }
