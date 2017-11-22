@@ -47,37 +47,69 @@ document.getElementById("date").innerHTML = fullDate;
 
 
 
+//
+// var startColor = '#d8d8d8';
+// var endColor = '#33c7ba';
+//
+// window.onload = function onLoad() {
+//   var progressCircles =["circle1","circle2"]
+//   function createCircleProgress(divClass){
+//       var circle = new ProgressBar.Circle('.'+divClass, {
+//         color: startColor,
+// 	    duration: 3000,
+// 	    easing: 'bounce',
+// 	    strokeWidth: 7,
+//       trailWidth: 7,
+//
+// 	    // Set default step function for all animate calls
+// 	    step: function(state, circle) {
+// 	        circle.path.setAttribute('stroke', state.color);
+//           circle.setText(value*100 + "%\nof class\ncompleted");
+// 	    }
+//     });
+//
+//     // This will get the number from the page
+//     var value = ($('.'+divClass).attr('value') / 100);
+//
+//     // This will determine the circumference of the circle
+//     circle.animate(value, {
+// 	    from: {color: startColor},
+// 	    to: {color: endColor}
+//  	  });
+//   }
+//   for(var i=0;i<progressCircles.length;i++){
+//      createCircleProgress(progressCircles[i]);
+//   }
+// };
 
-var startColor = '#d8d8d8';
-var endColor = '#33c7ba';
 
-window.onload = function onLoad() {
-  var progressCircles =["circle1","circle2"]
-  function createCircleProgress(divClass){
-      var circle = new ProgressBar.Circle('.'+divClass, {
-        color: startColor,
-	    duration: 3000,
-	    easing: 'bounce',
-	    strokeWidth: 7,
-      trailWidth: 7,
+// $(document).ready(() => {
+//   // initially displays only the course list and hides the calendar
+//   $('.calendar').hide();
+//
+//   $('.courseList, .courseCalendar').on('click',
+//     function()
+//     {
+//       $('.courseList, .courseCalendar').toggle();
+//     });
+//   // // when list is clicked, calendar is hidden and list is diplayed
+//   // $('.courseList').on('click', () =>{
+//   //   $('.schedule').toggle();
+//   //   $('.calendar').toggle();
+//   // });
+//   // // when calendar is clicked, list is hidden and calendar is displayed
+//   // $('.courseCalendar').on('click', () =>{
+//   //   $('.schedule').toggle();
+//   //   $('.calendar').toggle();
+//   // });
+// });
 
-	    // Set default step function for all animate calls
-	    step: function(state, circle) {
-	        circle.path.setAttribute('stroke', state.color);
-          circle.setText(value*100 + "%\nof class\ncompleted");
-	    }
-    });
+$('.calendar').hide();
+$('.courseList').addClass('activeCourseNav');
 
-    // This will get the number from the page
-    var value = ($('.'+divClass).attr('value') / 100);
-
-    // This will determine the circumference of the circle
-    circle.animate(value, {
-	    from: {color: startColor},
-	    to: {color: endColor}
- 	  });
-  }
-  for(var i=0;i<progressCircles.length;i++){
-     createCircleProgress(progressCircles[i]);
-  }
-};
+$('.courseList, .courseCalendar').on('click',
+  function()
+  {
+    $('.schedule, .calendar').toggle();
+    $('.courseList, .courseCalendar').toggleClass('activeCourseNav');
+  });
