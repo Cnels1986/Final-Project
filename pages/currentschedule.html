@@ -41,7 +41,7 @@
         <div id="date"></div>
         <section class="topSection">
           <div class="homeLogFlex">
-          <h5><a href="index.html">HOME</a></h5>
+          <h5><a href="../index.html">HOME</a></h5>
           <h5><a href="">LOG OUT?</a></h5>
         </div>
         </section>
@@ -73,18 +73,14 @@
         <article>
           <div class="scheduleNav">
             <h2 class="mainHeader">CURRENT SCHEDULE:</h2>
-            <ul>
-              <li>
-                <p>View as:</p>
-              </li>
-              <li>
-                <a href="">List</a>
-              </li>
-              <span>|</span>
-              <li>
-                <a href="">Calendar</a>
-              </li>
-            </ul>
+
+            <!-- will toggle the list and calendar displays -->
+            <div>
+              <p>View as:</p>
+              <div class="courseList">List</div>
+              <p>|</p>
+              <div class="courseCalendar">Calendar</div>
+            </div>
           </div>
           <div class="schedule">
             <section>
@@ -182,7 +178,9 @@
       </div>
     </div>
   </div>
-  <!-- </div> -->
+
+
+  <script src="../jquery-3.2.1.js"></script>
   <script src="../file.js"></script>
 </body>
 </html>
