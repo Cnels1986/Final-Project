@@ -1,0 +1,21 @@
+.content{
+  flex-direction: column;
+  h2{
+    @include text($mont, $darkteal,12px);
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 7px 0px;
+  }
+  h3{
+    @include text($mont, $headerBlack, 15px);
+    letter-spacing: 0.2px;
+    padding-bottom: 10px;
+  }
+  p{
+    @include text($robo, $textBlack, 13px);
+    letter-spacing: 0.2px;
+    padding: 7px 0px;
+    line-height: 21px;
+  }
+}
