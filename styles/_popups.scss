@@ -1,0 +1,99 @@
+@import "variables";
+
+.helpButton{
+  border: 0;
+  @include text($mont, $teal, 12px);
+  font-weight: bold;
+}
+
+.helpMenu{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.helpContent{
+  width: 500px;
+  background-color: $whiteText;
+  margin: 15% auto;
+  padding-bottom: 1px;
+
+  h3{
+    @include text($mont, $grades, 14px);
+    font-weight: bold;
+    padding: 25px 35px;
+  }
+  li{
+    padding-left: 35px;
+  }
+  label{
+    @include text($mont, $headerBlack, 14px);
+    line-height: 2;
+  }
+  h4{
+    @include text($mont, $headerBlack, 14px);
+    padding: 0 0 10px 35px;
+  }
+  h5{
+    @include text($mont, $headerBlack, 13px);
+    padding-left: 35px;
+    padding: 0 0 20px 35px;
+    width: 330px;
+    line-height: 1.6;
+  }
+  h2{
+    @include text($mont, $headerHeader, 12px);
+    font-weight: bold;
+    padding: 0 0 10px 35px;
+  }
+  h2:nth-of-type(2){
+    padding-top: 20px;
+  }
+  select{
+    margin-left: 35px;
+    border: 1 solid black;
+    background-color: #d8d8d8;
+  }
+
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animatetop;
+  animation-duration: 0.5s
+}
+
+@-webkit-keyframes animatetop {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes animatetop {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.helpNextButton{
+  height: 45px;
+  width: 115px;
+  background-color: $popupButton;
+  margin: 30px 35px;
+
+  p{
+    @include text($mont, white, 12px);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 18px;
+  }
+}
+
+textarea{
+  resize: none;
+  margin-left: 35px;
+  width: 420px;
+  height: 160px;
+}

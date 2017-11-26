@@ -101,3 +101,63 @@ $('.courseList, .courseCalendar').on('click',
     $('.schedule, .calendar').toggle();
     $('.courseList, .courseCalendar').toggleClass('activeCourseNav');
   });
+
+
+var helpMenu = document.getElementById('helpMenu');
+var helpBtn = document.getElementById('helpButton');
+var helpNextBtn = document.getElementById('helpNextButton');
+
+var otherMenu = document.getElementById('otherMenu');
+var otherMenu2 = document.getElementById('otherMenu2');
+var changeMenu = document.getElementById('changeMenu');
+var otherButton = document.getElementById('otherMenuButton');
+
+
+
+// displays the help menu when clicked
+helpBtn.onclick = function(){
+  helpMenu.style.display = "block";
+}
+
+otherButton.onclick = function(){
+  otherMenu.style.display = "none";
+  otherMenu2.style.display = "block";
+}
+
+// will hide popup if you click outside of the popup
+// window.onclick = function(event){
+//   if(event.target == helpMenu || event.target == otherMenu || event.target == changeMenu){
+//     helpMenu.style.display = "none";
+//     otherMenu.style.display = "none";
+//     changeMenu.style.display = "none";
+//   }
+// }
+
+helpNextBtn.onclick = function(){
+  var helpRadio = document.getElementsByName('help');
+  // checks which radio button is checked
+  for(var a=0 ; a<helpRadio.length; a++){
+    if(helpRadio[a].checked){
+      if(helpRadio[a].value == "changeMajors"){
+        helpMenu.style.display = "none";
+        changeMenu.style.display = "block";
+      }
+      else if(helpRadio[a].value == "courseUnavailable"){
+        helpMenu.style.display = "none";
+        unavailableMenu.style.display = "block";
+      }
+      else if(helpRadio[a].value == "other"){
+        helpMenu.style.display = "none";
+        otherMenu.style.display = "block";
+      }
+    }
+  }
+}
+
+
+var closeMenu = document.getElementById('closeMenu');
+// closes popup after completion
+closeMenu.onclick = function(){
+  otherMenu.style.display = "none";
+  changeMenu.style.display = "none";
+}
