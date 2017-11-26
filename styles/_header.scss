@@ -2,7 +2,7 @@
   width: 100%;
   height: 2px;
   background-color: $bluish;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 header{
   font-family: $mont;
@@ -55,7 +55,7 @@ header{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      padding: 20px 0px;
+      padding-top: 20px;
       letter-spacing: 0.2px;
       div{
         h4{
