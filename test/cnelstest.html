@@ -13,9 +13,9 @@
 
 </head>
 <body>
-  <div class="container">
+  <!-- <div class="container">
     <!-- will display the date with javascript -->
-    <div id="date"></div>
+    <!-- <div id="date"></div>
 
     <div id="progress">
       <div id="progressBar"></div>
@@ -30,8 +30,36 @@
   <button id="nextButton" disabled="disabled">NEXT >></button>
 
   <div id="circle"></div>
+  <
 
-  <script src="../progressbar.js"></script>
+  <script src="../progressbar.js"></script> -->
+
+  <button id="helpButton">GET HELP >></button>
+
+  <div id="helpModal" class="modal">
+    <div class="modal-content">
+      <h3 class="modalTitle">Course Registration Help</h3>
+      <ul>
+        <li>
+          <input type="radio" value="changeMajors" class="modalRadio">
+            <label class="label">I'd like to change majors.</label>
+        </li>
+        <li>
+          <input type="radio" value="courseUnavailable" class="modalRadio">
+            <label class="label">My major courses are unavailable.</label>
+        </li>
+        <li>
+          <input type="radio" value="other" class="modalRadio">
+            <label class="label">Other issue.</label>
+        </li>
+      </ul>
+      <div class="nextButton">
+        <p>NEXT >></p>
+      </div>
+    </div>
+  </div>
+
+
   <script src="cnelstest.js"></script>
 </body>
 </html>
