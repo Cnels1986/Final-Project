@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding-top: 10px;
+    padding-top: 15px;
   }
   p, div{
     padding-right: 20px;
@@ -29,8 +29,13 @@
     font-weight: bold;
   }
   p{
-    padding-top: 10px;
+    padding-top: 10px !important;
   }
+}
+
+// shifts the toggle links down a tad to make inline with other text
+.viewToggle div{
+  padding-top: 10px;
 }
 
 .schedule{
@@ -73,6 +78,7 @@
 
     p{
       @include text($mont, $whiteText, 10px);
+      line-height:1;
       text-align: center;
       padding: 3px;
     }
@@ -90,6 +96,7 @@
     p{
       @include text($mont, $whiteText, 10px);
       text-align: center;
+      line-height:1;
       padding: 5px;
     }
     p:nth-child(1){
@@ -105,6 +112,7 @@
     p{
       @include text($mont, $whiteText, 10px);
       text-align: center;
+      line-height:1;
       padding: 5px;
     }
     p:nth-child(1){
@@ -119,4 +127,5 @@
 
 .activeCourseNav{
   color: $activeCourseNav !important;
+  pointer-events: none;
 }
