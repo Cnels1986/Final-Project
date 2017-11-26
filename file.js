@@ -110,6 +110,7 @@ var helpNextBtn = document.getElementById('helpNextButton');
 var otherMenu = document.getElementById('otherMenu');
 var otherMenu2 = document.getElementById('otherMenu2');
 var changeMenu = document.getElementById('changeMenu');
+var unavailableMenu = document.getElementById('unavailableMenu');
 var otherButton = document.getElementById('otherMenuButton');
 
 
@@ -155,9 +156,20 @@ helpNextBtn.onclick = function(){
 }
 
 
-var closeMenu = document.getElementById('closeMenu');
+
+
+var closeMenu = document.getElementById('closeMenu1');
 // closes popup after completion
 closeMenu.onclick = function(){
-  otherMenu.style.display = "none";
+  unavailableMenu.style.display = "none";
+}
+closeMenu = document.getElementById('closeMenu2');
+// closes popup after completion
+closeMenu.onclick = function(){
+  otherMenu2.style.display = "none";
+}
+closeMenu = document.getElementById('closeMenu3');
+// closes popup after completion
+closeMenu.onclick = function(){
   changeMenu.style.display = "none";
 }
