@@ -125,15 +125,6 @@ otherButton.onclick = function(){
   otherMenu2.style.display = "block";
 }
 
-// will hide popup if you click outside of the popup
-// window.onclick = function(event){
-//   if(event.target == helpMenu || event.target == otherMenu || event.target == changeMenu){
-//     helpMenu.style.display = "none";
-//     otherMenu.style.display = "none";
-//     changeMenu.style.display = "none";
-//   }
-// }
-
 helpNextBtn.onclick = function(){
   var helpRadio = document.getElementsByName('help');
   // checks which radio button is checked
@@ -154,9 +145,6 @@ helpNextBtn.onclick = function(){
     }
   }
 }
-
-
-
 
 var closeMenu = document.getElementById('closeMenu1');
 // closes popup after completion
