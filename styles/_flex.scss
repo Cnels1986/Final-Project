@@ -50,3 +50,11 @@
     flex-direction: row;
   }
 }
+.buttonFlex3{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .buttonFlex2{
+    padding-right: 100px;
+  }
+}
