@@ -7,6 +7,7 @@
   font-size: $size;
 }
 
+ // styles the upcoming courses, semester and the semester date, same throughout all the upcoming courses pages
 .upcomingHeader{
   display: flex;
   flex-direction: row;
@@ -26,11 +27,12 @@
   }
 }
 
+// styles the box container on the initial upcoming course page
 .startBox{
   background-color: white;
-  height: 220px;
   text-align: center;
   margin-top: 20px;
+  padding-bottom: 60px;
 
   h2{
     padding-top: 60px;
@@ -64,6 +66,30 @@
     padding-left: 2.5%;
     padding-bottom: 15px;
   }
+  div{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.coreCourses{
+  padding: 10px 0 20px 4%;
+  div{
+    display: block;
+  }
+  label{
+    @include text($mont, $headerHeader, 12px);
+    font-weight: bold;
+    padding-left: 6px;
+  }
+  p{
+    @include text($mont, $headerBlack, 15);
+    padding: 8px 0 0 6px;
+  }
+}
+
+.moveCourseBox{
+  display: inline-block;;
 }
 
 .progressContainer{
