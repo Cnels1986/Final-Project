@@ -72,11 +72,45 @@ function()
   $('.courseList, .courseCalendar').toggleClass('activeCourseNav');
 });
 
+
+var percentage = 50;
+
+$('.coreCourse').hide();
+$('.genEdBox').hide();
+$('.cisBox').hide();
+$('.engBox').hide();
+
+$('.startButton').on('click', function(){
+  $('.upcomingStart').hide();
+  $('.coreCourse').slideDown();
+});
+
+$('.coreButton').on('click', function(){
+  $('.coreCourse').hide();
+  percentage = 60;
+    $('.genEdBox').slideDown();
+  // $('.genEdBox').show();
+
+});
+
+$('.cisButton').on('click', function(){
+  $('.genEdBox').hide();
+  percentage = 70;
+  $('.cisBox').slideDown();
+});
+
+$('.engButton').on('click', function(){
+  $('.genEdBox').hide();
+  percentage = 70;
+  $('.engBox').slideDown();
+})
+
+if(page == "upcomingcourses.html"){
 // this code will fill the progress bar depending on the provided percentage
 var x = document.getElementById("progressBar");
 var width = 1;
 var id = setInterval(frame, 10);
-var percentage =60;
+
 function frame() {
   if (width >= 100) {                 //clears if full
     clearInterval(id);
@@ -86,7 +120,6 @@ function frame() {
     x.style.width = width + '%';
   }
 }
-
 
 var helpMenu = document.getElementById('helpMenu');
 var helpBtn = document.getElementById('helpButton');
@@ -145,4 +178,7 @@ closeMenu = document.getElementById('closeMenu3');
 // closes popup after completion
 closeMenu.onclick = function(){
   changeMenu.style.display = "none";
+}
+
+
 }

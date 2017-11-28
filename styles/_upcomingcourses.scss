@@ -144,3 +144,43 @@
     font-size: 30px;
   }
 }
+
+// contains the content for the core course page
+.coreCourse{
+  height: 400px;
+  width: 400px;
+  background-color: blue;
+}
+
+.coreButton{
+  height: 42px;
+  width: 115px;
+  background-color: $button;
+  margin-left: 35px;
+
+  p{
+    text-align: center;
+    @include text($mont, $whiteText, 12px);
+    font-weight: bold;
+    padding-top: 15px;
+  }
+}
+
+.coreNav{
+  display: flex;
+  flex-direction: row;
+}
+
+// contains the content for the CIS geneds page
+.cisBox{
+  height: 500px;
+  width: 400px;
+  background-color: green;
+}
+
+// contains the content for the ENG geneds page
+.engBox{
+  height: 300px;
+  width: 800px;
+  background-color: yellow;
+}
