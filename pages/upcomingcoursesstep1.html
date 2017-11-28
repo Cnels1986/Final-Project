@@ -67,38 +67,69 @@
       </header>
 
       <div class="content">
-        <h2>UPCOMING COURSES:
-          <p>SEMESTER:     Spring2018</p>
-            <h3>Course Registration Completion:</h3>
-            <h4>Core Program Courses:<h4>
-              <div class="row">
-              <div>
-                <input type="checkbox" id="database" name="checkbox1" value="database">
-                <label for="database">CSET 155</label>
-              <p>Database Design</p>
-              </div>
-              <div>
-                <input type="checkbox" id="checkbox1" name="check" value="security">
-                <label for="security">CSET 170</label>
-              <p>Security & Profession Ethics</p>
-            </div>
-            </div>
-            <div class="row">
-              <div>
-                <input type="checkbox" id="web" name="checkbox1" value="web">
-                <label for="web">CSET 160</label>
-              <p>Web Development ||</p>
-            </div>
-            <div>
-              <input type="checkbox" id="software" name="checkbox1" value="software">
-              <label for="software">CSET 180</label>
-              <p>Software Project ||</p>
-            </div>
+        <div class="upcomingHeader">
+          <h2 class="mainHeader">UPCOMING COURSES:</h2>
+          <div>
+            <h5>Semester:</h5>
+            <h6>Spring 2018</h6>
           </div>
+        </div>
+        <div class="genEdBox">
+          <div class="progressContainer">
+            <h2>Course Registration Completion:</h2>
+            <h2>60%</h2>
+          </div>
+          <div id="progress">
+            <div id="progressBar"></div>
+          </div>
+
+          <h4>General Eduction</h4>
+            <div>
+
+              <div class="moveCourseBox">
+                <div class="coreCourses">
+                  <input type="checkbox" name="checkbox1">
+                  <div>
+                    <label>CSET 155</label>
+                    <p>Database Design</p>
+                  </div>
+                </div>
+
+                <div class="coreCourses">
+                  <input type="checkbox" name="checkbox1">
+                  <div>
+                    <label>CSET 160</label>
+                    <p>Web Development II</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="moveCourseBox">
+                <div class="coreCourses">
+                  <input type="checkbox" name="checkbox1">
+                  <div>
+                    <label>CSET 170</label>
+                    <p>Security &amp; Professional Ethics</p>
+                  </div>
+                </div>
+
+                <div class="coreCourses">
+                  <input type="checkbox" name="checkbox1">
+                  <div>
+                    <label>CSET 180</label>
+                    <p>Software Project II</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- </div> -->
+
+  <script src="../jquery-3.2.1.js"></script>
   <script src="../file.js"></script>
 </body>
 </html>

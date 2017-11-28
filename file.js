@@ -76,7 +76,7 @@ function()
 var x = document.getElementById("progressBar");
 var width = 1;
 var id = setInterval(frame, 10);
-var percentage =50;
+var percentage =60;
 function frame() {
   if (width >= 100) {                 //clears if full
     clearInterval(id);
