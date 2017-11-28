@@ -31,7 +31,6 @@
 .startBox{
   background-color: white;
   text-align: center;
-  margin-top: 20px;
   padding-bottom: 60px;
 
   h2{
@@ -59,7 +58,6 @@
 
 .genEdBox{
   background-color: white;
-  margin-top: 20px;
 
   h4{
     @include text($mont, $headerBlack, 14px);
@@ -86,10 +84,6 @@
     @include text($mont, $headerBlack, 15);
     padding: 8px 0 0 6px;
   }
-}
-
-.moveCourseBox{
-  display: inline-block;;
 }
 
 .progressContainer{
@@ -173,9 +167,8 @@
 
 // contains the content for the CIS geneds page
 .cisBox{
-  height: 500px;
-  width: 400px;
-  background-color: green;
+  background-color: white;
+  margin: 0 auto;
 }
 
 // contains the content for the ENG geneds page
@@ -183,4 +176,22 @@
   height: 300px;
   width: 800px;
   background-color: yellow;
+}
+
+.progressBox{
+  background-color: white;
+  padding-bottom: 20px;
+  margin-top: 20px;
+
+  .progressContainer{
+    padding-bottom: 20px;
+  }
+  .progressContainer, #progress{
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.upcomingStart{
+  margin-top: 20px;
 }
