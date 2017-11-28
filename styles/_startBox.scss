@@ -1,0 +1,38 @@
+.upcomingCoursesStart{
+  h2{
+    @include text($mont, $headerHeader,12px);
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 7px 0px;
+  }
+.startBox{
+  height: 13.438em;
+  background-color: #ffffff;
+  text-align: center;
+  h2{
+    @include text($mont, $headerHeader,12px);
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 7px 0px;
+    padding-top: 60px;
+  }
+  p{
+    @include text($mont, #202020, 15px);
+  }
+  .startButton{
+    background-color: $button;
+    height: 45px;
+    width: 115px;
+    text-align: center;
+    margin-left: 29.063em;
+    margin-top: 1.250em;
+    p{
+      padding-top: 17px;
+      @include text($mont, $whiteText, 14px);
+      font-weight: bold;
+    }
+  }
+}
+}

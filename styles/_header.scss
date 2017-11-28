@@ -42,7 +42,7 @@ header{
   }
   .lowerSection{
     h2{
-      @include text($mont, $darkteal, 12px);
+      @include text($mont, $headerHeader, 12px);
       letter-spacing: 0.2px;
       margin: 7px 0px;
       font-weight: bold;
