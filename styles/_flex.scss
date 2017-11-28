@@ -33,16 +33,18 @@
 .indexContentFlex{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   div{
 
   }
   div:nth-child(1){
-    //padding-right: 300px;
     width: 40%;
   }
   div:nth-child(2){
-    margin-left: 210px;
 }
+  .padding{
+    margin-right: 13.950em;
+  }
 }
 .upcomingCoursesStart{
   .topFlex{
