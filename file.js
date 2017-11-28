@@ -75,18 +75,20 @@ function()
 
 var percentage = 50;
 
+$('.progressBox').hide();
 $('.coreCourse').hide();
 $('.genEdBox').hide();
 $('.cisBox').hide();
 $('.engBox').hide();
 
 $('.startButton').on('click', function(){
-  $('.upcomingStart').hide();
+  $('.upcomingStart').slideUp();
+  $('.progressBox').slideDown();
   $('.coreCourse').slideDown();
 });
 
 $('.coreButton').on('click', function(){
-  $('.coreCourse').hide();
+  $('.coreCourse').slideUp();
   percentage = 60;
     $('.genEdBox').slideDown();
   // $('.genEdBox').show();
@@ -94,13 +96,13 @@ $('.coreButton').on('click', function(){
 });
 
 $('.cisButton').on('click', function(){
-  $('.genEdBox').hide();
+  $('.genEdBox').slideUp();
   percentage = 70;
   $('.cisBox').slideDown();
 });
 
 $('.engButton').on('click', function(){
-  $('.genEdBox').hide();
+  $('.genEdBox').slideUp();
   percentage = 70;
   $('.engBox').slideDown();
 })
