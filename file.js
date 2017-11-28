@@ -23,36 +23,6 @@ console.log(fullDate);
 document.getElementById("date").innerHTML = fullDate;
 
 
-// // javascript to create the circular progress bar for course completion
-// var bar = new ProgressBar.Circle(circle, {
-//   strokeWidth: 5,
-//   trailWidth: 5,
-//   easing: 'easeInOut',
-//   duration: 1400,
-//   color: '#33c7ba',
-//   from: { color: '#d8d8d8', width: 5},
-//   to: { color: '#33c7ba', width: 5 },
-//   //svgStyle: null
-//
-//   step: function(state, circle) {
-//     circle.path.setAttribute('stroke', state.color);
-//     circle.path.setAttribute('stroke-width', state.width);
-//
-//     var value = Math.round(circle.value() * 100);
-//     if (value === 0) {
-//       circle.setText('00');
-//     } else {
-//       circle.setText(value + "%\nof class\ncompleted");
-//       console.log(circle.text);
-//     }
-//
-//   }
-// });
-//
-// bar.animate(.69);
-
-
-
 if(page == "gradeandreporting.html"){
   var startColor = '#d8d8d8';
   var endColor = '#33c7ba';
@@ -60,18 +30,18 @@ if(page == "gradeandreporting.html"){
   window.onload = function onLoad() {
     var progressCircles =["circle1","circle2"]
     function createCircleProgress(divClass){
-        var circle = new ProgressBar.Circle('.'+divClass, {
-          color: startColor,
-  	    duration: 3000,
-  	    easing: 'bounce',
-  	    strokeWidth: 7,
+      var circle = new ProgressBar.Circle('.'+divClass, {
+        color: startColor,
+        duration: 3000,
+        easing: 'bounce',
+        strokeWidth: 7,
         trailWidth: 7,
 
-  	    // Set default step function for all animate calls
-  	    step: function(state, circle) {
-  	        circle.path.setAttribute('stroke', state.color);
-            // circle.setText(value*100 + "%\nof class\ncompleted");
-  	    }
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+          circle.path.setAttribute('stroke', state.color);
+          // circle.setText(value*100 + "%\nof class\ncompleted");
+        }
       });
 
       // This will get the number from the page
@@ -79,12 +49,12 @@ if(page == "gradeandreporting.html"){
 
       // This will determine the circumference of the circle
       circle.animate(value, {
-  	    from: {color: startColor},
-  	    to: {color: endColor}
-   	  });
+        from: {color: startColor},
+        to: {color: endColor}
+      });
     }
     for(var i=0;i<progressCircles.length;i++){
-       createCircleProgress(progressCircles[i]);
+      createCircleProgress(progressCircles[i]);
     }
   };
 }
@@ -96,11 +66,26 @@ $('.courseList').addClass('activeCourseNav');
 
 // while clicked it will toggle the display between the list and calendar and also change the highlighted link
 $('.courseList, .courseCalendar').on('click',
-  function()
+function()
+{
+  $('.schedule, .calendar').toggle();
+  $('.courseList, .courseCalendar').toggleClass('activeCourseNav');
+});
+
+// this code will fill the progress bar depending on the provided percentage
+var x = document.getElementById("progressBar");
+var width = 1;
+var id = setInterval(frame, 10);
+var percentage =50;
+function frame() {
+  if (width >= 100) {                 //clears if full
+    clearInterval(id);
+  } else if(width < percentage)       //fills bar until percentage
   {
-    $('.schedule, .calendar').toggle();
-    $('.courseList, .courseCalendar').toggleClass('activeCourseNav');
-  });
+    width++;
+    x.style.width = width + '%';
+  }
+}
 
 
 var helpMenu = document.getElementById('helpMenu');

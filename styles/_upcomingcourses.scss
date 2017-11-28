@@ -54,3 +54,67 @@
     padding-top: 16px;
   }
 }
+
+.genEdBox{
+  background-color: white;
+  margin-top: 20px;
+
+  h4{
+    @include text($mont, $headerBlack, 14px);
+    padding-left: 2.5%;
+    padding-bottom: 15px;
+  }
+}
+
+.progressContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+
+  h2{
+    @include text($mont, $grades, 14px);
+    font-weight: bold;
+    padding-top: 25px;
+  }
+}
+
+#progress{
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: $progressBarBackGround;
+  border-radius: 50px;
+}
+
+#progressBar{
+  height: 5px;
+  width: 1%;
+  background-color: $teal;
+  border-radius: 50px;
+}
+
+.genEdCourses{
+  div{
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 85%;
+    border-bottom: 1px $progressBarBackGround solid;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  div:last-of-type{
+    border-bottom: none;
+    padding-bottom: 30px;
+  }
+  h3, p{
+    @include text($mont, $genEdCourses, 15px);
+  }
+  p{
+    font-size: 30px;
+  }
+}
