@@ -4,6 +4,7 @@
   border: 0;
   @include text($mont, $teal, 12px);
   font-weight: bold;
+  padding-top: 15px;
 }
 
 .helpMenu{
