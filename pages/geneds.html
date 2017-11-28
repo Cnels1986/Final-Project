@@ -37,19 +37,23 @@
     </aside>
     <div class="smallFlex">
       <header>
-        <section>
-          <h5>
-            <a href="index.html">HOME</a>
-          </h5>
-          <div id="date"></div>
-          <h5><a href="/">LOG OUT?</a></h5>
+        <div id="date"></div>
+        <section class="topSection">
+          <div class="homeLogFlex">
+            <div class="breadcrumbs">
+              <h5><a href="../index.html">HOME</a></h5>
+              <p>> ACADEMIC SERVICES ></p>
+              <a href="" class="lastcrumb">UPCOMING COURSES</a>
+            </div>
+            <h5><a href="/">LOG OUT?</a></h5>
+          </div>
         </section>
-        <div class="bar">
+        <div class="blueBar">
         </div>
-        <section>
+        <section class="lowerSection">
           <h2>CURRENT PROGRAM:</h2>
           <h3>COMPUTER SOFTWARE ENGINEERING TECHNOLOGY</h3>
-          <div>
+          <div class="headerBasicFlex">
             <div>
               <h3>CURRENT SEMESTER:</h3>
               <h4>Fall 2017</h4>
@@ -63,22 +67,58 @@
               <h4>Good</h4>
             </div>
           </div>
+          <div class="blueBar">
+          </div>
         </section>
       </header>
 
       <div class="content">
-        <h2>UPCOMING COURSES:</h2>
-   <p>Semester:   Spring 2018</p>
-   <p>Course Registration completion:</P>
-    <h2>General Education</h2>
-    <div>Computer Information Systems</div>
-    <div>English</div>
-    <div>History</div>
-    <div>Mathematics</div>
-    <div>Physical Education & Health</div>
-    <div>Science</div>
-    <div>Social Sciences</div>
-  <!-- </div> -->
+        <div class="upcomingHeader">
+          <h2 class="mainHeader">UPCOMING COURSES:</h2>
+          <div>
+            <h5>Semester:</h5>
+            <h6>Spring 2018</h6>
+          </div>
+        </div>
+        <div class="genEdBox">
+          <div class="progressContainer">
+            <h2>Course Registration Completion:</h2>
+            <h2>60%</h2>
+          </div>
+          <div id="progress">
+            <div id="progressBar"></div>
+          </div>
+          <h4>General Eduction</h4>
+          <div class="genEdCourses">
+            <div>
+              <h3>Computer Information Systems</h3>
+              <p>&#707;</p>
+            </div>
+            <div>
+              <h3>English</h3>
+              <p>&#707;</p>
+            </div>
+            <div>
+              <h3>History</h3>
+              <p>&#707;</p>
+            </div>
+            <div>
+              <h3>Physical Education &amp; Health</h3>
+              <p>&#707;</p>
+            </div>
+            <div>
+              <h3>Science</h3>
+              <p>&#707;</p>
+            </div>
+            <div>
+              <h3>Social Sciences</h3>
+              <p>&#707;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <script src="../jquery-3.2.1.js"></script>
   <script src="../file.js"></script>
 </body>
 </html>
