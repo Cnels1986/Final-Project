@@ -1,0 +1,56 @@
+@import "variables";
+
+// Takes in font variable, color variable, font size
+@mixin text($font, $color, $size){
+  font-family: $font;
+  color: $color;
+  font-size: $size;
+}
+
+.upcomingHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  div{
+    padding-top: 10px;
+  }
+  h5, h6{
+    display: inline;
+    @include text($mont, $upcomingSemester, 10px);
+    font-weight: bold;
+    padding-left: 18px;
+  }
+  h6{
+    color: $upcomingSemesterDate;
+  }
+}
+
+.startBox{
+  background-color: white;
+  height: 220px;
+  text-align: center;
+  margin-top: 20px;
+
+  h2{
+    padding-top: 60px;
+  }
+  p:last-of-type{
+    @include text($mont, $headerBlack, 15px);
+  }
+}
+
+.startButton{
+  height:46px;
+  width: 116px;
+  background-color: $button;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  p{
+    color: $whiteText !important;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 16px;
+  }
+}
