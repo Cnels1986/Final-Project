@@ -1,0 +1,23 @@
+.coreCheckBoxes{
+  h3{
+    @include text($mont, $headerBlack, 14px);
+    padding-bottom: 20px;
+  }
+  label{
+    @include text($mont, $headerHeader, 12px);
+    font-weight: bold;
+    padding-left: 5px;
+  }
+  p{
+    @include text($mont, $headerBlack, 15px);
+    padding: 10px 0 25px 27px;
+  }
+}
+
+.checkboxCol{
+  display: inline-block;
+}
+.checkboxCol:last-of-type{
+  float: right;
+  padding-right: 40px;
+}
