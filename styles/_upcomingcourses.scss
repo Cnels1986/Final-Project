@@ -161,9 +161,11 @@
 .coreNav{
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   background-color: white;
   height: 70px;
-  width: 100%;
+  width: 97.5%;
+  // margin-right: 2.5%;
 }
 
 // contains the content for the CIS geneds page
