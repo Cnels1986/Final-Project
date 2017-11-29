@@ -72,49 +72,37 @@ function()
   $('.courseList, .courseCalendar').toggleClass('activeCourseNav');
 });
 
-function checkCheckBox(){
-  var boxList = document.getElementsByClassName('checkbox');
-  for(var a=0 ; a<boxList.length; a++){
-    if(boxList[a].checked == true)
-      console.log("yup");
-    else {
-      console.log("nope");
-    }
-  }
-}
-
 var percentage = 50;
 
+// hides the various popup menus until they're needed
 $('.progressBox').hide();
 $('.coreCourse').hide();
 $('.genEdBox').hide();
 $('.cisBox').hide();
 $('.engBox').hide();
 
+// initial page, progress bar and checkboxes appear when clicked
 $('.startButton').on('click', function(){
   $('.upcomingStart').slideUp();
   $('.progressBox').slideDown();
+  // changes percentage on page
   $('.progressPercent').text(percentage + "%");
   $('.coreCourse').slideDown();
 });
 
-document.getElementById("checkbox").addEventListener("click", checkCheckBox);
-
-$('.coreButton').hide();
-$('.checkbox').on('click', function(){
-  $('.coreButton').fadeIn();
-})
-
-
-// needs to check if a checkbox is checked to move on
-$('.coreButton').on('click', function(){
-  $('.coreCourse').slideUp();
-  percentage = 60;
-  $('.progressPercent').text(percentage + "%");
-  $('.genEdBox').slideDown();
-
+$('.coreButton').click(function () {
+  // determines if one or more of the checkboxes are checked, won't proceed until it does
+  var oneIsChecked = $('input:checkbox').is(':checked');
+  // if one is checked, page will proceed
+  if(oneIsChecked === true){
+      $('.coreCourse').slideUp();
+      percentage = 60;
+      $('.progressPercent').text(percentage + "%");
+      $('.genEdBox').slideDown();
+    }
 });
 
+// will display gened pages depending on what's selected
 $('.cisButton').on('click', function(){
   $('.genEdBox').slideUp();
   percentage = 70;
@@ -128,6 +116,7 @@ $('.engButton').on('click', function(){
   $('.progressPercent').text(percentage + "%");
   $('.engBox').slideDown();
 })
+
 
 if(page == "upcomingcourses.html"){
 // this code will fill the progress bar depending on the provided percentage
