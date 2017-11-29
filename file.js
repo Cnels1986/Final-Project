@@ -84,26 +84,29 @@ $('.engBox').hide();
 $('.startButton').on('click', function(){
   $('.upcomingStart').slideUp();
   $('.progressBox').slideDown();
+  $('.progressPercent').text(percentage + "%");
   $('.coreCourse').slideDown();
 });
 
 $('.coreButton').on('click', function(){
   $('.coreCourse').slideUp();
   percentage = 60;
-    $('.genEdBox').slideDown();
-  // $('.genEdBox').show();
+  $('.progressPercent').text(percentage + "%");
+  $('.genEdBox').slideDown();
 
 });
 
 $('.cisButton').on('click', function(){
   $('.genEdBox').slideUp();
   percentage = 70;
+  $('.progressPercent').text(percentage + "%");
   $('.cisBox').slideDown();
 });
 
 $('.engButton').on('click', function(){
   $('.genEdBox').slideUp();
   percentage = 70;
+  $('.progressPercent').text(percentage + "%");
   $('.engBox').slideDown();
 })
 
