@@ -72,6 +72,16 @@ function()
   $('.courseList, .courseCalendar').toggleClass('activeCourseNav');
 });
 
+function checkCheckBox(){
+  var boxList = document.getElementsByClassName('checkbox');
+  for(var a=0 ; a<boxList.length; a++){
+    if(boxList[a].checked == true)
+      console.log("yup");
+    else {
+      console.log("nope");
+    }
+  }
+}
 
 var percentage = 50;
 
@@ -88,6 +98,15 @@ $('.startButton').on('click', function(){
   $('.coreCourse').slideDown();
 });
 
+document.getElementById("checkbox").addEventListener("click", checkCheckBox);
+
+$('.coreButton').hide();
+$('.checkbox').on('click', function(){
+  $('.coreButton').fadeIn();
+})
+
+
+// needs to check if a checkbox is checked to move on
 $('.coreButton').on('click', function(){
   $('.coreCourse').slideUp();
   percentage = 60;
