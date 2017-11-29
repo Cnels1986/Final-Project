@@ -33,3 +33,7 @@
     letter-spacing: 0.2px;
   }
 }
+.indexLinks{
+  text-decoration: none;
+  @include text($robo, $grades, 13px);
+}
