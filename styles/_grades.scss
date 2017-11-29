@@ -1,16 +1,13 @@
 @import "variables";
-
-
 // Takes in font variable, color variable, font size
 @mixin text($font, $color, $size){
   font-family: $font;
   color: $color;
   font-size: $size;
 }
-.mainHeader{
+.mainHeader{//
   @include text($mont, $headerHeader, 12px);
   font-weight: bold;
-
   padding: 17px 0 10px 0;
 }
 

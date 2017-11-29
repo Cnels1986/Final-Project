@@ -1,4 +1,4 @@
-.contentIndex{
+.contentIndex{ //this will effect only the main content of the index page(not the header or aside)
   flex-direction: column;
   h2{
     @include text($mont, $headerHeader,12px);
@@ -19,7 +19,7 @@
     line-height: 21px;
   }
 }
-.topFlex{
+.topFlex{ //this is to adjust the top part of the content section
   h5{
     padding-left: 74.25em;
     @include text($mont, $gradesHeader, 10px);

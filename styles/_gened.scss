@@ -1,5 +1,4 @@
-.gened{
-  // height: 26.063em;
+.gened{ //this is the box for the english and CIS sections
   background-color: #ffffff;
   padding:0px 30px;
   h4{
@@ -8,7 +7,7 @@
   h5{
     @include text($mont, $genEdCourses, 15px);
   }
-  form{
+  form{ //this is to change the and text buttons of the forum
     padding: 15px;
     p{
       @include text($mont, $headerBlack, 15px);
@@ -19,7 +18,7 @@
       font-weight: bold;
       padding: 0px 0px 5px 10px;
     }
-    .buttonGenEdFLex{
+    .buttonGenEdFLex{ //this is to get each ot the buttons in propper position
       display: flex;
       flex-direction: row;
       margin: 30px 0px 15px;

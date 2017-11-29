@@ -6,7 +6,7 @@
 }
 header{
   font-family: $mont;
-  .topSection{
+  .topSection{  //we have the header split into two sections top and lower. we worked on the by themselves then flexed them together
     display: flex;
     flex-direction: column;
     div{
@@ -31,7 +31,7 @@ header{
       }
     }
   }
-  #date{
+  #date{//this is the date at the cery top of the screen
     /*replace with variable*/
     font-family: $mont;
     font-weight: bold;
@@ -41,7 +41,7 @@ header{
     text-align: right;
     padding-bottom: 8px;
   }
-  .lowerSection{
+  .lowerSection{  //this is the lower section of the header being worked on
     h2{
       @include text($mont, $headerHeader, 12px);
       letter-spacing: 0.2px;
@@ -52,7 +52,7 @@ header{
       @include text($mont, $headerBlack, 15px);
       letter-spacing: 0.2px;
     }
-    .headerBasicFlex{
+    .headerBasicFlex{ //this is the parts of the header of current semester, enrolled credit hours, and academic standing.
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -76,7 +76,7 @@ header{
   }
 }
 
-.breadcrumbs{
+.breadcrumbs{//this is the breadcrumbs up in the top let corner of each page.
   @include text($mont, $dateColor,12px);
   a,p{
     padding: 0 4px;
