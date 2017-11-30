@@ -81,7 +81,7 @@
     padding-left: 6px;
   }
   p{
-    @include text($mont, $headerBlack, 15);
+    @include text($mont, $headerBlack, 15px);
     padding: 8px 0 0 6px;
   }
 }
@@ -180,6 +180,11 @@
   margin: 0 auto;
 }
 
+.regMenu{
+  background-color: white;
+  margin: 0 auto;
+}
+
 .progressBox{
   background-color: white;
   padding-bottom: 20px;
@@ -217,7 +222,19 @@
   }
 }
 
-.greyOut{
-  opacity: .5;
-  pointer-events: none;
+.regMenu{
+  h2{
+    @include text($mont, $headerBlack, 18px);
+    padding: 10px 0 20px 2.5%;
+  }
+  h3{
+    @include text($mont, $headerHeader, 12px);
+    font-weight: bold;
+    padding: 15px 0 8px 5%;
+  }
+  p{
+    @include text($mont, $headerBlack, 15px);
+    padding: 5px 0 20px 5%;
+  }
+  padding-bottom: 20px;
 }
