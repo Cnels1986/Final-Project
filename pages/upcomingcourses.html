@@ -107,21 +107,21 @@
               <h3>Core Program Courses:</h3>
 
               <div class="checkboxCol">
-                <input type="checkbox" class="checkbox" id="checkbox">
+                <input type="checkbox" class="checkbox" id="checkbox" value="1">
                 <label>CSET 155</label>
                 <p>Database Design</p>
 
-                <input type="checkbox" class="checkbox" id="checkbox">
+                <input type="checkbox" class="checkbox" id="checkbox" value="2">
                 <label>CSET 160</label>
                 <p>Web Development II</p>
               </div>
 
               <div class="checkboxCol">
-                <input type="checkbox" class="checkbox" id="checkbox">
+                <input type="checkbox" class="checkbox" id="checkbox" value="3">
                 <label>CSET 170</label>
                 <p>Security &amp; Professional Ethics</p>
 
-                <input type="checkbox" class="checkbox" id="checkbox">
+                <input type="checkbox" class="checkbox" id="checkbox" value="4">
                 <label>CSET 180</label>
                 <p>Software Project II</p>
               </div>
@@ -134,6 +134,7 @@
                 <p>NEXT >></p>
               </div>
             </div>
+
 
           <!-- creates the initial help menu with the 3 selections -->
           <div id="helpMenu" class="helpMenu">
@@ -159,6 +160,7 @@
             </div>
           </div>
 
+
           <div class="helpMenu" id="unavailableMenu">
             <div class="helpContent">
               <h3>Course Registration Help</h3>
@@ -169,6 +171,7 @@
               </div>
             </div>
           </div>
+
 
           <div class="helpMenu" id="otherMenu">
             <div class="helpContent">
@@ -182,6 +185,7 @@
             </div>
           </div>
 
+
           <div class="helpMenu" id="otherMenu2">
             <div class="helpContent">
               <h3>Course Registration Help</h3>
@@ -192,6 +196,7 @@
               </div>
             </div>
           </div>
+
 
           <div class="helpMenu" id="changeMenu">
             <div class="helpContent">
@@ -228,6 +233,11 @@
             </div>
           </div>
 
+        </div>
+
+        <!-- pop up will display the selected courses -->
+        <div class="regMenu" id="regMenu">
+          <h2>Registered Courses:</h2>
         </div>
 
         <div class="genEdBox">
@@ -268,28 +278,28 @@
               <div class="genBar">
               </div>
               <div class="buttonGenEdFLex">
-              <input type="radio" name="cis">
+              <input type="radio" name="cis" value="1">
               <div>
               <h1>CIS 105</h1>
               <p>Drawing with AutoCAD</p>
             </div>
             </div>
             <div class="buttonGenEdFLex">
-              <input type="radio" name="cis">
+              <input type="radio" name="cis" value="2">
               <div>
               <h1>CIS 111</h1>
               <p>Introduction to Computer Applications</p>
             </div>
             </div>
             <div class="buttonGenEdFLex">
-              <input type="radio" name="cis">
+              <input type="radio" name="cis" value="3">
               <div>
               <h1>CIS 211</h1>
               <p>Microsoft Excel</p>
             </div>
             </div>
             </form>
-            <div class="regButton">
+            <div class="regButton CISButton">
               <div>
                 <p>REGISTER >></p>
               </div>
@@ -307,21 +317,21 @@
               <div class="buttonFlex3">
                 <div>
                   <div class="buttonGenEdFLex">
-                    <input type="radio" name="eng">
+                    <input type="radio" name="eng" value="1">
                     <div>
                       <h1>ENG 106</h1>
                       <p>English Composition</p>
                     </div>
                   </div>
                   <div class="buttonGenEdFLex">
-                    <input type="radio" name="eng">
+                    <input type="radio" name="eng" value="2">
                     <div>
                       <h1>ENG 116</h1>
                       <p>Public Speaking</p>
                     </div>
                   </div>
                   <div class="buttonGenEdFLex">
-                    <input type="radio" name="eng">
+                    <input type="radio" name="eng" value="3">
                     <div>
                       <h1>ENG 216</h1>
                       <p>Short Story and Poetry</p>
@@ -330,14 +340,14 @@
                 </div>
                 <div class="buttonFlex2">
                   <div class="buttonGenEdFLex">
-                    <input type="radio" name="eng">
+                    <input type="radio" name="eng" value="4">
                     <div>
                       <h1>ENG 221</h1>
                       <p>Short Contemporary Novel</p>
                     </div>
                   </div>
                   <div class="buttonGenEdFLex">
-                    <input type="radio" name="eng">
+                    <input type="radio" name="eng" value="5">
                     <div>
                       <h1>ENG 225</h1>
                       <p>Technical Report Writing</p>
@@ -346,7 +356,7 @@
                 </form>
               </div>
             </div>
-            <div class="regButton">
+            <div class="regButton ENGButton">
               <div>
                 <p>REGISTER >></p>
               </div>
