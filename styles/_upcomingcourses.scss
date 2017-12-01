@@ -37,7 +37,7 @@
     padding-top: 60px;
   }
   p:last-of-type{
-    @include text($mont, $headerBlack, 15px);
+    @include text($mont, $whiteText, 15px);
   }
 }
 
@@ -49,7 +49,6 @@
   margin-top: 30px;
 
   p{
-    color: $whiteText !important;
     font-weight: bold;
     text-align: center;
     padding-top: 16px;
