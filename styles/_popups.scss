@@ -92,9 +92,23 @@
   }
 }
 
+.backtostart  {
+    text-decoration: none;
+  }
+
 textarea{
   resize: none;
   margin-left: 35px;
   width: 420px;
   height: 160px;
+}
+
+.logOutNav{
+  display: flex;
+  flex-direction: row;
+  h3{
+    @include text($mont, $popupButton, 12px);
+    font-weight: bold;
+    padding: 45px 0 0 0;
+  }
 }

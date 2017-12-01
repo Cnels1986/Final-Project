@@ -294,7 +294,6 @@ $('.ENGButton').on('click', function(){
   }
 });
 
-
 if(page == "upcomingcourses.html"){
   // this code will fill the progress bar depending on the provided percentage
   // example found at
@@ -371,6 +370,13 @@ if(page == "upcomingcourses.html"){
   closeMenu.onclick = function(){
     changeMenu.style.display = "none";
   }
-
-
 }
+
+// displays the logout pop when button is clicked
+$('#logOutButton').on('click', function(){
+  $('#logOut').toggle();
+});
+// hides logout popup when clicked
+$('#nevermind').on('click', function(){
+  $('#logOut').toggle();
+})
