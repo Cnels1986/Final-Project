@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
 </head>
 <body>
-  <!-- <div class="border"> -->
   <div class="bigFlex">
     <aside>
       <div>
@@ -36,6 +35,7 @@
         <li><a href="">Student Services</a></li>
       </ul>
     </aside>
+
     <div class="smallFlex">
       <header>
         <div id="date"></div>
@@ -81,11 +81,12 @@
             <!-- will toggle the list and calendar displays -->
             <div class="viewToggle">
               <p>View as:</p>
-              <div class="courseList">List</div>
+              <div class="courseList ">List</div>
               <p>|</p>
               <div class="courseCalendar">Calendar</div>
             </div>
           </div>
+          <!-- displays the schedule is list format, did not use a list to do it though -->
           <div class="schedule">
             <section>
               <h3>CSET 105, M, 12:00pm - 4:30pm</h3>
@@ -113,6 +114,7 @@
             </section>
           </div>
 
+          <!-- displays the schedule in calendar form, hidden when the page first loads -->
           <div class="calendar">
             <!-- monday -->
             <div class="dayCol">
@@ -149,6 +151,7 @@
                 <p>ENGL 101, 8:00 - 9:30am</p>
                 <p>English Composition</p>
               </div>
+              <!-- different div for a shorter class time -->
               <div class="csetClassShort">
                 <p>CSET 110, 12:30 - 4:30pm</p>
                 <p>Web Development I</p>
@@ -184,7 +187,7 @@
       </div>
     </div>
 
-
+    <!-- javascript files used -->
     <script src="../jquery-3.2.1.js"></script>
     <script src="../file.js"></script>
   </body>

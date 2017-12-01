@@ -106,7 +106,7 @@
           </div>
         </div>
 
-
+        <!-- starting point for the upcoming courses page -->
         <div class="upcomingStart">
           <div class="startBox">
             <h2 class="mainHeader">YOU CURRENTLY HAVE NO REGISTERED COURSES</h2>
@@ -117,38 +117,42 @@
           </div>
         </div>
 
+
+        <!-- core courses page, uses checkboxes so multiple courses can be selected -->
         <div class="coreCourse">
           <div class="coreCheckBoxes">
-              <h3>Core Program Courses:</h3>
+            <h3>Core Program Courses:</h3>
 
-              <div class="checkboxCol">
-                <input type="checkbox" class="checkbox" id="checkbox" value="1">
-                <label>CSET 155</label>
-                <p>Database Design</p>
+            <!-- checkbox with course name and number -->
+            <div class="checkboxCol">
+              <input type="checkbox" class="checkbox" id="checkbox" value="1">
+              <label>CSET 155</label>
+              <p>Database Design</p>
 
-                <input type="checkbox" class="checkbox" id="checkbox" value="2">
-                <label>CSET 160</label>
-                <p>Web Development II</p>
-              </div>
-
-              <div class="checkboxCol">
-                <input type="checkbox" class="checkbox" id="checkbox" value="3">
-                <label>CSET 170</label>
-                <p>Security &amp; Professional Ethics</p>
-
-                <input type="checkbox" class="checkbox" id="checkbox" value="4">
-                <label>CSET 180</label>
-                <p>Software Project II</p>
-              </div>
+              <input type="checkbox" class="checkbox" id="checkbox" value="2">
+              <label>CSET 160</label>
+              <p>Web Development II</p>
             </div>
 
-            <div class="coreNav">
-              <!-- code for the popup display and button-->
-              <div id="helpButton" class="helpButton">GET HELP >></div>
-              <div class="coreButton" id="coreButton">
-                <p>NEXT >></p>
-              </div>
+            <div class="checkboxCol">
+              <input type="checkbox" class="checkbox" id="checkbox" value="3">
+              <label>CSET 170</label>
+              <p>Security &amp; Professional Ethics</p>
+
+              <input type="checkbox" class="checkbox" id="checkbox" value="4">
+              <label>CSET 180</label>
+              <p>Software Project II</p>
             </div>
+          </div>
+
+          <!-- next button with the help button where popups will be used - javascript -->
+          <div class="coreNav">
+            <!-- code for the popup display and button-->
+            <div id="helpButton" class="helpButton">GET HELP >></div>
+            <div class="coreButton" id="coreButton">
+              <p>NEXT >></p>
+            </div>
+          </div>
 
 
           <!-- creates the initial help menu with the 3 selections -->
@@ -175,7 +179,7 @@
             </div>
           </div>
 
-
+          <!-- full major course popup, displays message then closes once button is clicked -->
           <div class="helpMenu" id="unavailableMenu">
             <div class="helpContent">
               <h3>Course Registration Help</h3>
@@ -188,6 +192,7 @@
           </div>
 
 
+          <!-- popup with a textarea for user to enter what the issue was, will move to the next popup when button is clicked -->
           <div class="helpMenu" id="otherMenu">
             <div class="helpContent">
               <h3>Course Registration Help</h3>
@@ -201,6 +206,7 @@
           </div>
 
 
+          <!-- popup only displays message, closes once button is clicked -->
           <div class="helpMenu" id="otherMenu2">
             <div class="helpContent">
               <h3>Course Registration Help</h3>
@@ -213,12 +219,14 @@
           </div>
 
 
+          <!-- popup contains a dropdown menu with the other majors to select, closes once button is clicked -->
           <div class="helpMenu" id="changeMenu">
             <div class="helpContent">
               <h3>Course Registration Help</h3>
               <h2>CURRENT PROGRAM</h2>
               <h4>Computer Software Engineering Technology</h4>
               <h2>NEW PROGRAM:</h2>
+              <!-- list of all the different majors -->
               <select>
                 <option>ARCHITECTURAL TECHNOLOGY</option>
                 <option>AUTOMOTIVE TECHNOLOGY</option>
@@ -250,14 +258,18 @@
 
         </div>
 
-        <!-- pop up will display the selected courses -->
+
+        <!-- page at the end of course registration that displays what courses were selected -->
         <div class="regMenu" id="regMenu">
           <h2>Registered Courses:</h2>
         </div>
 
+
+        <!-- page displays the different general ed subjects, only CIS and ENG are clickable -->
         <div class="genEdBox">
           <h4>General Eduction</h4>
           <div class="genEdCourses">
+            <!-- javascript is used with the buttons to contain to the next page depending on which is clicked -->
             <div class="cisButton">
               <h3>Computer Information Systems</h3>
               <p>&#707;</p>
@@ -284,34 +296,38 @@
             </div>
           </div>
         </div>
+
+
+        <!-- page that contains the different CIS classes, selected with radio buttons -->
         <div class="cisBox">
           <div class="gened">
             <h4>General Education</h4>
             <form>
-            <h5>Computer Information Systems</h5>
+              <h5>Computer Information Systems</h5>
               <div class="genBar">
               </div>
               <div class="buttonGenEdFLex">
-              <input type="radio" name="cis" value="1">
-              <div>
-              <h1>CIS 105</h1>
-              <p>Drawing with AutoCAD</p>
-            </div>
-            </div>
-            <div class="buttonGenEdFLex">
-              <input type="radio" name="cis" value="2">
-              <div>
-              <h1>CIS 111</h1>
-              <p>Introduction to Computer Applications</p>
-            </div>
-            </div>
-            <div class="buttonGenEdFLex">
-              <input type="radio" name="cis" value="3">
-              <div>
-              <h1>CIS 211</h1>
-              <p>Microsoft Excel</p>
-            </div>
-            </div>
+                <!-- value of the different radio buttons is used with javascript to determine which course was selected -->
+                <input type="radio" name="cis" value="1">
+                <div>
+                  <h1>CIS 105</h1>
+                  <p>Drawing with AutoCAD</p>
+                </div>
+              </div>
+              <div class="buttonGenEdFLex">
+                <input type="radio" name="cis" value="2">
+                <div>
+                  <h1>CIS 111</h1>
+                  <p>Introduction to Computer Applications</p>
+                </div>
+              </div>
+              <div class="buttonGenEdFLex">
+                <input type="radio" name="cis" value="3">
+                <div>
+                  <h1>CIS 211</h1>
+                  <p>Microsoft Excel</p>
+                </div>
+              </div>
             </form>
             <div class="regButton CISButton">
               <div>
@@ -320,6 +336,9 @@
             </div>
           </div>
         </div>
+
+
+        <!-- page that contains the different ENG courses, same as the CIS page -->
         <div class="engBox">
           <div class="gened">
             <h4>General Education</h4>
@@ -381,6 +400,7 @@
     </div>
   </div>
 
+  <!-- javascript files used for this page -->
   <script src="../jquery-3.2.1.js"></script>
   <script src="../file.js"></script>
 </body>
