@@ -1,0 +1,66 @@
+.smallFlex{
+  width: 100%;
+}
+.container{
+  display:block;
+  width: 95%;
+  margin: 2.5% auto;
+.content{
+  display: flex;
+  justify-content: center;
+  .loginBox{
+    height: 23.125em;
+    width: 50%;
+    background-color: white;
+    margin-top: 4.500em;
+    h1{
+      @include text($mont, $headerBlack, 24px);
+      text-align: center;
+      padding: 60px 0px 12px 0px;
+      font-weight: bold;
+    }
+    h2{
+      @include text($mont, $popupButton, 21px);
+      text-align: center;
+    }
+    .loginForm{
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      input{
+        width: 350px;
+        height: 48px;
+        margin: 0px auto 0px auto;
+        text-align: center;
+        @include text($mont, $popupButton, 16px);
+        margin-top: 5px;
+        border: $popupButton 1px solid;
+      }
+    }
+    .loginOther{
+      display: flex;
+      flex-direction: row;
+      margin-top: 15px;
+      justify-content: center;
+      .loginSubmitButton{
+        border: $popupButton 1px solid;
+        width: 150px;
+        height: 48px;
+        background-color: $popupButton;
+        margin-right: 17.1px
+      }
+      p:nth-child(1){
+        @include text($mont, white, 16px);
+        text-align: center;
+        padding-top: 15px;
+
+
+      }
+      p:nth-child(2){
+        @include text($mont, $popupButton, 12px);
+        padding-top: 15px;
+      }
+    }
+  }
+}
+}
