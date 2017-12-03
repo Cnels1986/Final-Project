@@ -388,3 +388,15 @@ $('#cellphoneEdit').on('click', function(){
 $('#altCellPhoneEdit').on('click', function(){
   $('#changeAltPhone').toggle();
 })
+
+$('#addressEdit').on('click', function(){
+  $('#changeAddress').toggle();
+})
+
+$('#schoolAddressEdit').on('click', function(){
+  $('#changeSchoolAddress').toggle();
+})
+
+$('#altEmailEdit').on('click', function(){
+  $('#changeAltEmail').toggle();
+})

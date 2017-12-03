@@ -36,8 +36,8 @@
   h2{
     padding-top: 60px;
   }
-  p:last-of-type{
-    @include text($mont, $whiteText, 15px);
+  p{
+    @include text($mont, $headerBlack, 15px);
   }
 }
 
@@ -52,6 +52,7 @@
     font-weight: bold;
     text-align: center;
     padding-top: 16px;
+    @include text($mont, $whiteText, 15px);
   }
 }
 
