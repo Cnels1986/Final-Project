@@ -1,6 +1,10 @@
 .smallFlex{
   width: 100%;
 }
+.container{
+  display:block;
+  width: 95%;
+  margin: 2.5% auto;
 .content{
   display: flex;
   justify-content: center;
@@ -59,8 +63,4 @@
     }
   }
 }
-.container{
-  display:block;
-  width: 95%;
-  margin: 2.5% auto;
 }
