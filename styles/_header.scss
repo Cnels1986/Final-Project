@@ -18,12 +18,10 @@ header{
         @include text($mont, $dateColor,12px);
         letter-spacing: 0.2px;
         text-decoration: none;
-        //margin-top: 3px;
       }
     }
     h5:last-child{
       text-align: right;
-      //margin-top: 3px;
       a{
         @include text($mont, $darkteal,12px);
         letter-spacing: 0.2px;
@@ -36,7 +34,6 @@ header{
     font-family: $mont;
     font-weight: bold;
     font-size: 10px;
-    /*replace with variable*/
     color: $dateColor;
     text-align: right;
     padding-bottom: 8px;
@@ -87,5 +84,22 @@ header{
   .lastcrumb{
     color: $darkteal;
     font-weight: bold;
+  }
+}
+
+.settingLog{
+  a:link{
+    text-decoration: none;
+    color: $darkteal;
+  }
+  h4{
+    font-weight: bold;
+  }
+  h5, p, h4{
+    padding-left: 25px;
+    font-size: 12px;
+  }
+  a,p{
+    color:$darkteal;
   }
 }

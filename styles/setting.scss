@@ -1,0 +1,59 @@
+@import "variables";
+
+// Takes in font variable, color variable, font size
+@mixin text($font, $color, $size){
+  font-family: $font;
+  color: $color;
+  font-size: $size;
+}
+
+.name{
+  @include text($mont, $headerBlack, 15px);
+  padding-bottom: 20px;
+}
+
+.settingCol{
+  display: flex;
+  flex-direction: row;
+}
+
+.settingContainer{
+
+  width: 45%;
+  div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    div{
+      display: block;
+      width: 75%;
+    }
+  }
+  h3{
+    @include text($mont, $headerSubHeader, 12px);
+    font-weight: bold;
+  }
+  p{
+    @include text($mont, $headerBlack, 15px);
+    padding: 8px 0 30px 0;
+  }
+}
+
+.settingContainer:nth-of-type(2){
+  padding-left: 10%;
+  float: right;
+}
+
+.settingSave{
+  height:50px;
+  width: 130px;
+  background-color: $grades;
+  margin-top: 30px;
+  float: right;
+
+  p{
+    @include text($mont, $whiteText, 16px);
+    text-align: center;
+    padding-top: 19px;
+  }
+}
