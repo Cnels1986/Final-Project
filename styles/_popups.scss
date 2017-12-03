@@ -112,3 +112,18 @@ textarea{
     padding: 45px 0 0 0;
   }
 }
+
+.editInput{
+  input{
+    width: 70%;
+    height: 45px;
+    display: block;
+    border: 1px solid black;
+    margin: 0 0 20px 35px;
+  }
+  input::placeholder{
+    color: $popupButton;
+    padding-left: 10px;
+    font-size: 16px;
+  }
+}
