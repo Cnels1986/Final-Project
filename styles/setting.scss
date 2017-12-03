@@ -57,3 +57,13 @@
     padding-top: 19px;
   }
 }
+
+.invalidButton{
+  display: flex;
+  flex-direction: row;
+}
+
+.invalidInput{
+  padding: 45px 0 0 80px;
+  @include text($mont, $wrongInput, 14px);
+}

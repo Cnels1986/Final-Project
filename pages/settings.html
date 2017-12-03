@@ -53,7 +53,7 @@
             <div class="settingLog">
               <h4><a href="" class="settingsLink">SETTINGS</a></h4>
               <p>|</p>
-              <h5><a href="">LOG OUT?</a></h5>
+              <h5><a id="logOutButton">LOG OUT?</a></h5>
             </div>
 
           </div>
@@ -84,6 +84,63 @@
       </header>
 
       <div class="content">
+
+        <div class="helpMenu" id="logOut">
+          <div class="helpContent">
+            <h3>Log out</h3>
+            <h5>Are you sure you want to log out?</h5>
+            <a href="../index.html" class="backtostart"><div class="logOutNav">
+              <div class="helpNextButton" id="closeMenu2">
+                <p>LOG OUT</p>
+              </div>
+            </a>
+              <h3 id="nevermind">NEVERMIND</h3>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- popup to change phone number -->
+        <div class="helpMenu" id="changePhone">
+          <div class="helpContent">
+            <h3>Update Phone Number:</h3>
+            <h5>To update your phone number, please enter it twice below</h5>
+            <div class="editInput">
+              <input type="text" name="phone1" placeholder="New Phone Number">
+              <input type="text" name="phone2" placeholder="Verify Phone Number">
+            </div>
+            <div class="invalidButton">
+              <div class="helpNextButton" id="changePhoneButton">
+                <p>SUBMIT</p>
+              </div>
+              <div class="invalidInput">
+                <p>temp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up to change the alternate phone number -->
+        <div class="helpMenu" id="changeAltPhone">
+          <div class="helpContent">
+            <h3>Update Alternate Phone Number:</h3>
+            <h5>To update your alternate phone number, please enter it twice below</h5>
+            <div class="editInput">
+              <input type="text" name="phone1" placeholder="New Phone Number">
+              <input type="text" name="phone2" placeholder="Verify Phone Number">
+            </div>
+            <div class="invalidButton">
+              <div class="helpNextButton" id="changePhoneButton">
+                <p>SUBMIT</p>
+              </div>
+              <div class="invalidInput">
+                <p>temp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <h2 class="mainHeader">STUDENT NAME:</h2>
         <p class="name">Son Goku</p>
         <div class="settingCol">
@@ -96,14 +153,14 @@
                   1234 Main Road, Lancaster, Pennsylvania 17603
                 </p>
               </div>
-              <h3>EDIT</h3>
+              <h3 id="addressEdit">EDIT</h3>
             </div>
             <div>
               <div>
                 <h3>CELL PHONE:</h3>
                 <p id="cellphone">717-984-2837</p>
               </div>
-              <h3>EDIT</h3>
+              <h3 id="cellphoneEdit">EDIT</h3>
             </div>
             <div>
               <div>
@@ -116,27 +173,27 @@
             <div>
               <div>
                 <h3>SCHOOL ADDRESS:</h3>
-                <p id="schoolId">
+                <p id="schoolAddress">
                   1100 East Orange Street,
                   #3A
                   Lancaster, Pennsylvania 17602
                 </p>
               </div>
-              <h3>EDIT</h3>
+              <h3 id="schoolAddressEdit">EDIT</h3>
             </div>
             <div>
               <div>
                 <h3>ALTERNATE PHONE:</h3>
                 <p id="altCellphone">717-900-9381</p>
               </div>
-              <h3>EDIT</h3>
+              <h3 id="altCellPhoneEdit">EDIT</h3>
             </div>
             <div>
               <div>
                 <h3>ALTERNATE EMAIL:</h3>
                 <p id="altEmail">goku@aol.com</p>
               </div>
-              <h3>EDIT</h3>
+              <h3 id="altEmailEdit">EDIT</h3>
             </div>
           </div>
         </div>
@@ -148,6 +205,7 @@
     </div>
   </div>
 
+  <script src="../jquery-3.2.1.js"></script>
   <script src="../file.js"></script>
 </body>
 </html>

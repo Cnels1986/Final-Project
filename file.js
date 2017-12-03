@@ -380,3 +380,11 @@ $('#logOutButton').on('click', function(){
 $('#nevermind').on('click', function(){
   $('#logOut').toggle();
 })
+
+$('#cellphoneEdit').on('click', function(){
+  $('#changePhone').toggle();
+})
+
+$('#altCellPhoneEdit').on('click', function(){
+  $('#changeAltPhone').toggle();
+})
