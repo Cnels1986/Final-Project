@@ -1,7 +1,7 @@
 $("#forgotPasswordButton").on("click", function(){
   $("#forgotPassword1").toggle();
 })
-var progress = 0;
+var progress = 1;
 
 function split(str){
   var email = str.value;
@@ -23,6 +23,17 @@ function move(){
   }
 }
 
+
+var bar = new ProgressBar.Line(indexProgress, {
+  strokeWidth: 3,
+  easing: 'easeInOut',
+  duration: 1400,
+  color: '#3bb9ba',
+  trailColor: '#4a4a4a',
+  trailWidth: 3,
+  svgStyle: {width: '100%', height: '100%'}
+});
+
 $(".loginSubmitButton").on("click", function(){
   var email = document.getElementById("loginEmail");
   var password = document.getElementById("loginPassword");
@@ -40,7 +51,6 @@ $(".loginSubmitButton").on("click", function(){
 
 $("#indexSubmit").on("click", function(){  
   var email = document.getElementById("emailAddress");
-  var bar = document.getElementById("indexProgressFill");
   if(email.value === '' || split(email) === false){
     $(".helpContent").effect("shake");
     $(".invalidMessage").text("wrong");
@@ -49,7 +59,6 @@ $("#indexSubmit").on("click", function(){
     progress = 33;
     $("#forgotPassword1").toggle();
     $("#forgotPassword2").toggle();
-    $(bar).css("width", "33%");
-    move();
+    bar.animate(.33);
   }
 });
