@@ -419,6 +419,8 @@ function checkPhone(phone1, phone2){
 
 // shows phone number popup
 $('#cellphoneEdit').on('click', function(){
+  $('.invalidMessage').text('');
+  $('input').css("border", "1px solid black");
   $('#changePhone').toggle();
 });
 // checks and compares phone numbers
@@ -434,6 +436,8 @@ $('#changePhoneButton').on('click', function(){
 
 
 $('#altCellPhoneEdit').on('click', function(){
+  $('.invalidMessage').text('');
+  $('input').css("border", "1px solid black");
   $('#changeAltPhone').toggle();
 });
 // checks and compares alternate phone numbers
@@ -458,8 +462,36 @@ function verifyEmail(email1, email2){
 }
 
 $('#addressEdit').on('click', function(){
+  $('.invalidMessage').text('');
+  $('input').css("border", "1px solid black");
   $('#changeAddress').toggle();
 });
+$('#changeAddressButton').on('click', function(){
+  // creates variables from the different input
+  var street = document.getElementById('street');
+  var city = document.getElementById('city');
+  var state = document.getElementById('state');
+  var zip = document.getElementById('zip');
+
+  // if one of the fields is empty
+  if(street.value === "" || city.value === "" || state.value === "" || zip.value === ""){
+    $('.invalidMessage').text("Missing Information");
+    $('input').css("border", "1px solid #d0021b");
+  }
+  else{
+    document.getElementById('address1').innerHTML = street.value + ", " + city.value + ",";
+    document.getElementById('address2').innerHTML = state.value + " " + zip.value;
+    $('#changeAddress').toggle();
+  }
+});
+
+
+// javascript to change the alternate email address, checks if its in the correct format too
+$('#altEmailEdit').on('click', function(){
+  $('.invalidMessage').text('');
+  $('input').css("border", "1px solid black");
+  $('#changeAltEmail').toggle();
+})
 $('#changeEmailButton').on('click', function(){
   var email1 = document.getElementById('email1');
   var email2 = document.getElementById('email2');
@@ -484,13 +516,32 @@ $('#changeEmailButton').on('click', function(){
     document.getElementById('altEmail').innerHTML = email1.value;
     $('#changeAltEmail').toggle();
   }
+});
 
-})
+
 
 $('#schoolAddressEdit').on('click', function(){
+  $('.invalidMessage').text('');
+  $('input').css("border", "1px solid black");
   $('#changeSchoolAddress').toggle();
-})
+});
+$('#changeSchoolAddressButton').on('click', function(){
+  // creates variables from the different input
+  var street = document.getElementById('school_street');
+  var building = document.getElementById('school_building');
+  var city = document.getElementById('school_city');
+  var state = document.getElementById('school_state');
+  var zip = document.getElementById('school_zip');
 
-$('#altEmailEdit').on('click', function(){
-  $('#changeAltEmail').toggle();
-})
+  // if one of the fields is empty
+  if(street.value === "" || city.value === "" || state.value === "" || zip.value === "" || building.value === ""){
+    $('.invalidMessage').text("Missing Information");
+    $('input').css("border", "1px solid #d0021b");
+  }
+  else{
+    document.getElementById('schoolAddress').innerHTML = street.value + ", " + city.value + ",";
+    document.getElementById('schoolBuilding').innerHTML = building.value;
+    document.getElementById('schoolAddress2').innerHTML = state.value + " " + zip.value;
+    $('#changeSchoolAddress').toggle();
+  }
+});
