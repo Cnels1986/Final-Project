@@ -402,16 +402,20 @@ function checkPhone(phone1, phone2){
     $('.invalidMessage').text("Phone Number Missing");
     // change border color of textfields
     $('input').css("border", "1px solid #d0021b");
+    $('.helpContent').effect('shake');
+    $
   }
   // phone numbers in the wrong format
   else if(phonenumber(phone1) === false || phonenumber(phone2) === false){
     $('.invalidMessage').text("Wrong Format");
     $('input').css("border", "1px solid #d0021b");
+    $('.helpContent').effect('shake');
   }
   // if the two numbers are not the same
   else if(phone1.value != phone2.value){
     $('.invalidMessage').text("Phone Numbers Not The Same");
     $('input').css("border", "1px solid #d0021b");
+    $('.helpContent').effect('shake');
   }
   // phone numbers match
   else if(phone1.value == phone2.value){
@@ -442,6 +446,7 @@ $('#confirmButtonPhone').on('click', function(){
 
 
 
+// javascript to change the alternate phone number
 $('#altCellPhoneEdit').on('click', function(){
   $('.invalidMessage').text('');
   $('input').css("border", "1px solid #3bb9ba");
@@ -473,6 +478,9 @@ function verifyEmail(email1, email2){
   }
 }
 
+
+
+// javascript to change the address
 $('#addressEdit').on('click', function(){
   $('.invalidMessage').text('');
   $('input').css("border", "1px solid #3bb9ba");
@@ -489,6 +497,7 @@ $('#changeAddressButton').on('click', function(){
   if(street.value === "" || city.value === "" || state.value === "" || zip.value === ""){
     $('.invalidMessage').text("Missing Information");
     $('input').css("border", "1px solid #d0021b");
+    $('.helpContent').effect('shake');
   }
   else{
     document.getElementById('address1').innerHTML = street.value + ", " + city.value + ",";
@@ -500,6 +509,7 @@ $('#changeAddressButton').on('click', function(){
 $('#confirmButtonAddress').on('click', function(){
   $('#addressConfirm').toggle();
 })
+
 
 
 // javascript to change the alternate email address, checks if its in the correct format too
@@ -517,16 +527,19 @@ $('#changeEmailButton').on('click', function(){
   if(email1.value === '' || email2.value === ''){
     $('.invalidMessage').text('Email Address Missing');
     $('input').css("border", "1px solid #d0021b");
+    $('.helpContent').effect('shake');
   }
   // not matching emails
   else if(email1.value != email2.value){
     $('.invalidMessage').text('Email Address Not The Same');
     $('input').css("border", "1px solid #d0021b");
+    $('.helpContent').effect('shake');
   }
   // emails are not in the right format
   else if(verifyEmail(email1, email2) === false){
     $('.invalidMessage').text('Wrong Format');
     $('input').css("border", "1px solid #d0021b");
+    $('.helpContent').effect('shake');
   }
   else if(email1.value == email2.value){
     document.getElementById('altEmail').innerHTML = email1.value;
@@ -541,6 +554,7 @@ $('#confirmButtonAltEmail').on('click', function(){
 
 
 
+// to change the school address
 $('#schoolAddressEdit').on('click', function(){
   $('.invalidMessage').text('');
   $('input').css("border", "1px solid #3bb9ba");
@@ -558,6 +572,7 @@ $('#changeSchoolAddressButton').on('click', function(){
   if(street.value === "" || city.value === "" || state.value === "" || zip.value === "" || building.value === ""){
     $('.invalidMessage').text("Missing Information");
     $('input').css("border", "1px solid #d0021b");
+    $('.helpContent').effect('shake');
   }
   else{
     document.getElementById('schoolAddress').innerHTML = street.value + ", " + city.value + ",";
