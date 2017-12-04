@@ -49,8 +49,7 @@ $(".loginSubmitButton").on("click", function(){
 
 })
 
-$("#indexSubmit").on("click", function(){
-
+$("#indexSubmit").on("click", function(){  
   var email = document.getElementById("emailAddress");
   if(email.value === '' || split(email) === false){
     $(".helpContent").effect("shake");
