@@ -169,17 +169,17 @@
             <h3>Update Address:</h3>
             <h5>To update your address, please enter it below.</h5>
             <div class="editInput">
-              <input type="text" name="street" placeholder="Street">
-              <input type="text" name="city" placeholder="City">
-              <input type="text" name="state" placeholder="State">
-              <input type="text" name="zip" placeholder="Zip Code">
+              <input type="text" id="street" placeholder="Street">
+              <input type="text" id="city" placeholder="City">
+              <input type="text" id="state" placeholder="State">
+              <input type="text" id="zip" placeholder="Zip Code">
             </div>
             <div class="invalidButton">
-              <div class="helpNextButton" id="changePhoneButton">
+              <div class="helpNextButton" id="changeAddressButton">
                 <p>SUBMIT</p>
               </div>
               <div class="invalidInput">
-                <p>temp</p>
+                <p class="invalidMessage"></p>
               </div>
             </div>
           </div>
@@ -192,18 +192,18 @@
             <h3>Update Address:</h3>
             <h5>To update your school address, please enter it below.</h5>
             <div class="editInput">
-              <input type="text" name="school_street" placeholder="Street">
-              <input type="text" name="school_building" placeholder="Building Number">
-              <input type="text" name="school_city" placeholder="City">
-              <input type="text" name="school_state" placeholder="State">
-              <input type="text" name="school_zip" placeholder="Zip Code">
+              <input type="text" id="school_street" placeholder="Street">
+              <input type="text" id="school_building" placeholder="Building Number">
+              <input type="text" id="school_city" placeholder="City">
+              <input type="text" id="school_state" placeholder="State">
+              <input type="text" id="school_zip" placeholder="Zip Code">
             </div>
             <div class="invalidButton">
-              <div class="helpNextButton" id="changePhoneButton">
+              <div class="helpNextButton" id="changeSchoolAddressButton">
                 <p>SUBMIT</p>
               </div>
               <div class="invalidInput">
-                <p>temp</p>
+                <p class="invalidMessage"></p>
               </div>
             </div>
           </div>
@@ -216,10 +216,13 @@
 
           <div class="settingContainer">
             <div>
-              <div>
+              <div class="addressFormat">
                 <h3>HOME ADDRESS:</h3>
-                <p id="address">
-                  1234 Main Road, Lancaster, Pennsylvania 17603
+                <p id="address1">
+                  1234 Main Road, Lancaster,
+                </p>
+                <p id="address2">
+                  Pennsylvania 17603
                 </p>
               </div>
               <h3 id="addressEdit">EDIT</h3>
@@ -240,12 +243,17 @@
           </div>
           <div class="settingContainer">
             <div>
-              <div>
+              <div class="schoolAddressFormat">
                 <h3>SCHOOL ADDRESS:</h3>
                 <p id="schoolAddress">
-                  1100 East Orange Street,
+                  1100 East Orange Street
+                </p>
+                <p id="schoolBuilding">
                   #3A
+                </p>
+                <p id="schoolAddress2">
                   Lancaster, Pennsylvania 17602
+                </p>
                 </p>
               </div>
               <h3 id="schoolAddressEdit">EDIT</h3>

@@ -68,3 +68,21 @@
   padding-left: 20px;
   @include text($mont, $wrongInput, 14px);
 }
+
+.addressFormat{
+  p{
+    padding: 5px;
+  }
+  p:last-of-type{
+    padding-bottom: 55px;
+  }
+}
+
+.schoolAddressFormat{
+  p{
+    padding: 5px;
+  }
+  p:last-of-type{
+    padding-bottom: 20px;
+  }
+}
