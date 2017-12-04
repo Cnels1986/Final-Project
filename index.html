@@ -62,7 +62,7 @@
         <!-- second popup box -->
         <div class="helpMenu" id="forgotPassword2">
           <div class="helpContent">
-            <div id="indexProgress"></div>
+            <div id="indexProgress1" class='progress'></div>
             <h3>Forgot Password</h3>
             <h5>Great! Answer the following security questions to have a new password emailed to your account. </h5>
             <h5>What was the street you grew up on?</h5>
@@ -70,7 +70,7 @@
               <input type="text" id="streetQuestion" value="">
             </div>
             <div class="invalidButton">
-              <div class="helpNextButton" id="indexSubmit">
+              <div class="helpNextButton" id="streetSubmit">
                 <p>SUBMIT</p>
               </div>
               <div class="invalidInput">
@@ -79,21 +79,41 @@
             </div>
           </div>
         </div>
+
+
         <!-- third popup box -->
         <div class="helpMenu" id="forgotPassword3">
           <div class="helpContent">
-            <div id="indexProgressTrack">
-              <div id="indexProgressFill"></div>
-            </div>
+            <div id="indexProgress2" class="progress"></div>
             <h3>Forgot Password</h3>
             <h5>Great! Answer the following security questions to have a new password emailed to your account. </h5>
-            <h5>What was the street you grew up on?</h5>
+            <h5>What is your favorite color?</h5>
             <div class="editInput">
               <input type="text" id="colorQuestion" value="">
             </div>
             <div class="invalidButton">
-              <div class="helpNextButton" id="indexSubmit">
+              <div class="helpNextButton" id="colorSubmit">
                 <p>SUBMIT</p>
+              </div>
+              <div class="invalidInput">
+                <p class="invalidMessage"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- final box -->
+        <div class="helpMenu" id="forgotPassword4">
+          <div class="helpContent">
+            <div id="indexProgress3" class="progress"></div>
+            <h3>Forgot Password</h3>
+            <h5>Success! We've confirmed your identity. A new password is being sent to the email address on file. </h5>
+            <div class="editInput">
+              <input type="text" id="colorQuestion" value="">
+            </div>
+            <div class="invalidButton">
+              <div class="helpNextButton" id="finalBox">
+                <p>OKAY</p>
               </div>
               <div class="invalidInput">
                 <p class="invalidMessage"></p>
