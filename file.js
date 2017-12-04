@@ -107,38 +107,38 @@ function checkboxCourses(){
   for(var a=0; a<checked.length; a++){
     // if the check box is checked, determines which course is selected
     if(checked[a].checked == true)
-      // CSET 155
-      if(checked[a].value == '1'){
-        var course ={
-          number : "CSET 155",
-          name : "Database Design"
-        }
-        courseArray.push(course);
+    // CSET 155
+    if(checked[a].value == '1'){
+      var course ={
+        number : "CSET 155",
+        name : "Database Design"
       }
-      // CSET 160
-      else if(checked[a].value == '2'){
-        var course ={
-          number : "CSET 160",
-          name : "Web Development II"
-        }
-        courseArray.push(course);
+      courseArray.push(course);
+    }
+    // CSET 160
+    else if(checked[a].value == '2'){
+      var course ={
+        number : "CSET 160",
+        name : "Web Development II"
       }
-      // CSET 170
-      else if(checked[a].value == '3'){
-        var course ={
-          number : "CSET 170",
-          name : "Security & Professional Ethics"
-        }
-        courseArray.push(course);
+      courseArray.push(course);
+    }
+    // CSET 170
+    else if(checked[a].value == '3'){
+      var course ={
+        number : "CSET 170",
+        name : "Security & Professional Ethics"
       }
-      // CSET 180
-      else if(checked[a].value == '4'){
-        var course ={
-          number : "CSET 180",
-          name : "Software Project II"
-        }
-        courseArray.push(course);
+      courseArray.push(course);
+    }
+    // CSET 180
+    else if(checked[a].value == '4'){
+      var course ={
+        number : "CSET 180",
+        name : "Software Project II"
       }
+      courseArray.push(course);
+    }
   }
   // displays selected courses for debugging purposes
   for(var b=0; b< courseArray.length; b++){
@@ -331,7 +331,8 @@ if(page == "upcomingcourses.html"){
 
   otherButton.onclick = function(){
     otherMenu.style.display = "none";
-    otherMenu2.style.display = "block";
+    // otherMenu2.style.display = "block";
+    $('#otherMenu2').show();
   }
 
   helpNextBtn.onclick = function(){
@@ -360,10 +361,11 @@ if(page == "upcomingcourses.html"){
   closeMenu.onclick = function(){
     unavailableMenu.style.display = "none";
   }
-  closeMenu = document.getElementById('closeMenu2');
+  closeMenu = document.getElementById('testbutton');
   // closes popup after completion
   closeMenu.onclick = function(){
-    otherMenu2.style.display = "none";
+    $('#otherMenu2').hide();
+    // otherMenu2.style.display = "none";
   }
   closeMenu = document.getElementById('closeMenu3');
   // closes popup after completion
@@ -395,32 +397,32 @@ function phonenumber(inputtxt) {
 }
 
 function checkPhone(phone1, phone2){
-    // checks if there's missing input
-    if(phone1.value === '' || phone2.value === ''){
-      $('.invalidMessage').text("Phone Number Missing");
-      // change border color of textfields
-      $('input').css("border", "1px solid #d0021b");
-    }
-    // phone numbers in the wrong format
-    else if(phonenumber(phone1) === false || phonenumber(phone2) === false){
-      $('.invalidMessage').text("Wrong Format");
-      $('input').css("border", "1px solid #d0021b");
-    }
-    // if the two numbers are not the same
-    else if(phone1.value != phone2.value){
-      $('.invalidMessage').text("Phone Numbers Not The Same");
-      $('input').css("border", "1px solid #d0021b");
-    }
-    // phone numbers match
-    else if(phone1.value == phone2.value){
-      return true;
-    }
+  // checks if there's missing input
+  if(phone1.value === '' || phone2.value === ''){
+    $('.invalidMessage').text("Phone Number Missing");
+    // change border color of textfields
+    $('input').css("border", "1px solid #d0021b");
+  }
+  // phone numbers in the wrong format
+  else if(phonenumber(phone1) === false || phonenumber(phone2) === false){
+    $('.invalidMessage').text("Wrong Format");
+    $('input').css("border", "1px solid #d0021b");
+  }
+  // if the two numbers are not the same
+  else if(phone1.value != phone2.value){
+    $('.invalidMessage').text("Phone Numbers Not The Same");
+    $('input').css("border", "1px solid #d0021b");
+  }
+  // phone numbers match
+  else if(phone1.value == phone2.value){
+    return true;
+  }
 }
 
 // shows phone number popup
 $('#cellphoneEdit').on('click', function(){
   $('.invalidMessage').text('');
-  $('input').css("border", "1px solid black");
+  $('input').css("border", "1px solid #3bb9ba");
   $('#changePhone').toggle();
 });
 // checks and compares phone numbers
@@ -437,7 +439,7 @@ $('#changePhoneButton').on('click', function(){
 
 $('#altCellPhoneEdit').on('click', function(){
   $('.invalidMessage').text('');
-  $('input').css("border", "1px solid black");
+  $('input').css("border", "1px solid #3bb9ba");
   $('#changeAltPhone').toggle();
 });
 // checks and compares alternate phone numbers
@@ -463,7 +465,7 @@ function verifyEmail(email1, email2){
 
 $('#addressEdit').on('click', function(){
   $('.invalidMessage').text('');
-  $('input').css("border", "1px solid black");
+  $('input').css("border", "1px solid #3bb9ba");
   $('#changeAddress').toggle();
 });
 $('#changeAddressButton').on('click', function(){
@@ -489,7 +491,7 @@ $('#changeAddressButton').on('click', function(){
 // javascript to change the alternate email address, checks if its in the correct format too
 $('#altEmailEdit').on('click', function(){
   $('.invalidMessage').text('');
-  $('input').css("border", "1px solid black");
+  $('input').css("border", "1px solid #3bb9ba");
   $('#changeAltEmail').toggle();
 })
 $('#changeEmailButton').on('click', function(){
@@ -522,7 +524,7 @@ $('#changeEmailButton').on('click', function(){
 
 $('#schoolAddressEdit').on('click', function(){
   $('.invalidMessage').text('');
-  $('input').css("border", "1px solid black");
+  $('input').css("border", "1px solid #3bb9ba");
   $('#changeSchoolAddress').toggle();
 });
 $('#changeSchoolAddressButton').on('click', function(){
