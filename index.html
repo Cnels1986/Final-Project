@@ -22,15 +22,64 @@
           <h1>Thaddeus Stevens College of Technology</h1>
           <h2>Student Portal</h2>
           <div class="loginForm">
-          <input type="text" value="Email Address">
-          <input type="text" value="Password">
+            <input type="text" placeholder="Email Address" id="loginEmail">
+            <input type="text" placeholder="Password" id="loginPassword">
+          </div>
+          <div class="loginOther">
+            <div class="loginSubmitButton">
+              <p>Submit</p>
+            </div>
+            <p id="forgotPasswordButton">Forgot Password</p>
+            <div class="invalidInput">
+              <h4 class="invalidWrong"></h4>
+            </div>
+          </div>
+
         </div>
-        <div class="loginOther">
-        <div class="loginSubmitButton">
-        <p>Submit</p>
-      </div>
-        <p>Forgot Password</p>
-      </div>
+        <!-- first popup box -->
+        <div class="helpMenu" id="forgotPassword1">
+          <div class="helpContent">
+            <div id="indexProgressTrack">
+              <div id="indexProgressFill"></div>
+            </div>
+            <h3>Forgot Password</h3>
+            <h5>Don't worry, forgotten passwords happen to everyone from time to time.</h5>
+            <h5>What is your email address?</h5>
+            <div class="editInput">
+              <input type="text" id="emailAddress" placeholder="Email Address" value="">
+            </div>
+            <div class="invalidButton">
+              <div class="helpNextButton" id="indexSubmit">
+                <p>SUBMIT</p>
+              </div>
+              <div class="invalidInput">
+                <p class="invalidMessage"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- second popup box -->
+        <div class="helpMenu" id="forgotPassword2">
+          <div class="helpContent">
+            <div id="indexProgressTrack">
+              <div id="indexProgressFill"></div>
+            </div>
+            <h3>Forgot Password</h3>
+            <h5>Great! Answer the following security questions to have a new password emailed to your account. </h5>
+            <h5>What was the street you grew up on?</h5>
+            <div class="editInput">
+              <input type="text" id="emailAddress" placeholder="Email Address" value="">
+            </div>
+            <div class="invalidButton">
+              <div class="helpNextButton" id="indexSubmit">
+                <p>SUBMIT</p>
+              </div>
+              <div class="invalidInput">
+                <p class="invalidMessage"></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -38,6 +87,8 @@
 
   <!-- javascript files used -->
   <script src="jquery-3.2.1.js"></script>
+  <script src="jquery-ui.js"></script>
   <script src="file.js"></script>
+  <script src="indexjs.js"></script>
 </body>
 </html>
