@@ -38,8 +38,7 @@ $(".loginSubmitButton").on("click", function(){
 
 })
 
-$("#indexSubmit").on("click", function(){
-
+$("#indexSubmit").on("click", function(){  
   var email = document.getElementById("emailAddress");
   var bar = document.getElementById("indexProgressFill");
   if(email.value === '' || split(email) === false){
@@ -51,6 +50,6 @@ $("#indexSubmit").on("click", function(){
     $("#forgotPassword1").toggle();
     $("#forgotPassword2").toggle();
     $(bar).css("width", "33%");
-    // move();
+    move();
   }
 });
