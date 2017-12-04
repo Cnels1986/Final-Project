@@ -1,0 +1,36 @@
+@import "variables";
+// Takes in font variable, color variable, font size
+@mixin text($font, $color, $size){
+  font-family: $font;
+  color: $color;
+  font-size: $size;
+}
+
+.dashContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.academicStanding{
+  width: 66%;
+
+  h2{
+    padding-bottom: 20px;
+  }
+  div{
+    height: 275px;
+    width: 215px;
+    background-color: white;
+
+    display: inline-block;
+    margin: 0 15px 15px 0;
+  }
+  div:nth-of-type(even){
+    margin-right: 0;
+  }
+}
+
+.dashboardSideBar{
+  width: 30%;
+  padding-left: 20px;
+}
