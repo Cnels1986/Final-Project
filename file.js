@@ -433,8 +433,13 @@ $('#changePhoneButton').on('click', function(){
   if(checkPhone(phone1, phone2) === true){
     document.getElementById('cellphone').innerHTML = phone1.value;
     $('#changePhone').toggle();
+    $('#phoneConfirm').toggle();
   }
 });
+$('#confirmButtonPhone').on('click', function(){
+  $('#phoneConfirm').toggle();
+});
+
 
 
 $('#altCellPhoneEdit').on('click', function(){
@@ -450,8 +455,13 @@ $('#changeAltPhoneButton').on('click', function(){
   if(checkPhone(phone1, phone2) === true){
     document.getElementById('altCellphone').innerHTML = phone1.value;
     $('#changeAltPhone').toggle();
+    $('#altPhoneConfirm').toggle();
   }
 });
+
+$('#confirmButtonAltPhone').on("click", function(){
+  $('#altPhoneConfirm').toggle();
+})
 
 
 
@@ -484,8 +494,12 @@ $('#changeAddressButton').on('click', function(){
     document.getElementById('address1').innerHTML = street.value + ", " + city.value + ",";
     document.getElementById('address2').innerHTML = state.value + " " + zip.value;
     $('#changeAddress').toggle();
+    $('#addressConfirm').toggle();
   }
 });
+$('#confirmButtonAddress').on('click', function(){
+  $('#addressConfirm').toggle();
+})
 
 
 // javascript to change the alternate email address, checks if its in the correct format too
@@ -517,8 +531,13 @@ $('#changeEmailButton').on('click', function(){
   else if(email1.value == email2.value){
     document.getElementById('altEmail').innerHTML = email1.value;
     $('#changeAltEmail').toggle();
+    $('#altEmailConfirm').toggle();
   }
 });
+
+$('#confirmButtonAltEmail').on('click', function(){
+  $('#altEmailConfirm').toggle();
+})
 
 
 
@@ -545,5 +564,9 @@ $('#changeSchoolAddressButton').on('click', function(){
     document.getElementById('schoolBuilding').innerHTML = building.value;
     document.getElementById('schoolAddress2').innerHTML = state.value + " " + zip.value;
     $('#changeSchoolAddress').toggle();
+    $('#schoolAddressConfirm').toggle();
   }
+});
+$('#confirmButtonSchool').on('click', function(){
+  $('#schoolAddressConfirm').toggle();
 });
