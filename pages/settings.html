@@ -104,17 +104,17 @@
         <div class="helpMenu" id="changePhone">
           <div class="helpContent">
             <h3>Update Phone Number:</h3>
-            <h5>To update your phone number, please enter it twice below</h5>
+            <h5>To update your phone number, please enter it twice below (xxx-xxx-xxxx)</h5>
             <div class="editInput">
-              <input type="text" name="phone1" placeholder="New Phone Number">
-              <input type="text" name="phone2" placeholder="Verify Phone Number">
+              <input type="text" id="phone1" placeholder="New Phone Number" value="">
+              <input type="text" id="phone2" placeholder="Verify Phone Number" value="">
             </div>
             <div class="invalidButton">
               <div class="helpNextButton" id="changePhoneButton">
                 <p>SUBMIT</p>
               </div>
               <div class="invalidInput">
-                <p>temp</p>
+                <p class="invalidMessage"></p>
               </div>
             </div>
           </div>
@@ -125,17 +125,17 @@
         <div class="helpMenu" id="changeAltPhone">
           <div class="helpContent">
             <h3>Update Alternate Phone Number:</h3>
-            <h5>To update your alternate phone number, please enter it twice below</h5>
+            <h5>To update your alternate phone number, please enter it twice below (xxx-xxx-xxxx)</h5>
             <div class="editInput">
-              <input type="text" name="phone1" placeholder="New Phone Number">
-              <input type="text" name="phone2" placeholder="Verify Phone Number">
+              <input type="text" id="altphone1" placeholder="New Phone Number">
+              <input type="text" id="altphone2" placeholder="Verify Phone Number">
             </div>
             <div class="invalidButton">
-              <div class="helpNextButton" id="changePhoneButton">
+              <div class="helpNextButton" id="changeAltPhoneButton">
                 <p>SUBMIT</p>
               </div>
               <div class="invalidInput">
-                <p>temp</p>
+                <p class="invalidMessage"></p>
               </div>
             </div>
           </div>

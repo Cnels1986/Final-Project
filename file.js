@@ -379,15 +379,75 @@ $('#logOutButton').on('click', function(){
 // hides logout popup when clicked
 $('#nevermind').on('click', function(){
   $('#logOut').toggle();
-})
+});
 
+
+
+// function determines if the phone number is in the correct format xxx-xxx-xxxx
+function phonenumber(inputtxt) {
+  var phoneno = /^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{4})$/;
+  if(inputtxt.value.match(phoneno)) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+function checkPhone(phone1, phone2){
+    // checks if there's missing input
+    if(phone1.value === '' || phone2.value === ''){
+      $('.invalidMessage').text("Phone Number Missing");
+      // change border color of textfields
+      $('input').css("border", "1px solid #d0021b");
+    }
+    // phone numbers in the wrong format
+    else if(phonenumber(phone1) === false || phonenumber(phone2) === false){
+      $('.invalidMessage').text("Wrong Format");
+      $('input').css("border", "1px solid #d0021b");
+    }
+    // if the two numbers are not the same
+    else if(phone1.value != phone2.value){
+      $('.invalidMessage').text("Phone Numbers Not The Same");
+      $('input').css("border", "1px solid #d0021b");
+    }
+    // phone numbers match
+    else if(phone1.value == phone2.value){
+      return true;
+    }
+}
+
+// shows phone number popup
 $('#cellphoneEdit').on('click', function(){
   $('#changePhone').toggle();
-})
+});
+// checks and compares phone numbers
+$('#changePhoneButton').on('click', function(){
+  // gets the values from the text fields
+  var phone1 = document.getElementById('phone1');
+  var phone2 = document.getElementById('phone2');
+  if(checkPhone(phone1, phone2) === true){
+    document.getElementById('cellphone').innerHTML = phone1.value;
+    $('#changePhone').toggle();
+  }
+});
+
 
 $('#altCellPhoneEdit').on('click', function(){
   $('#changeAltPhone').toggle();
-})
+});
+// checks and compares alternate phone numbers
+$('#changeAltPhoneButton').on('click', function(){
+  // gets the values from the text fields
+  var phone1 = document.getElementById('altphone1');
+  var phone2 = document.getElementById('altphone2');
+  if(checkPhone(phone1, phone2) === true){
+    document.getElementById('altCellphone').innerHTML = phone1.value;
+    $('#changeAltPhone').toggle();
+  }
+});
+
+
 
 $('#addressEdit').on('click', function(){
   $('#changeAddress').toggle();
