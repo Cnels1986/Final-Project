@@ -2,14 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Home</title>
+  <title>Academic Dashboard</title>
   <meta name="”viewport”" content="”width=device-width," initial-scale="1.0”">
   <link rel="stylesheet" type="text/css" href="../style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 </head>
-
 <body>
+  <!-- <div class="border"> -->
   <div class="bigFlex">
     <aside>
       <div>
@@ -18,17 +17,17 @@
       <h1>Son Goku</h1>
       <h2>ACADEMIC SERVICES</h2>
       <ul>
-        <li>
-          <a href="dashboard.html">Academic Dashboard</a>
+        <li class="active">
+          <a href="">Academic Dashboard</a>
         </li>
         <li>
           <a href="currentschedule.html">Current Schedule</a>
         </li>
         <li>
-          <a href="gradeandreporting.html">Grades &amp; Reporting</a>
+          <a href="gradeandreporting">Grades &amp; Reporting</a>
         </li>
         <li>
-          <a href="upcomingcourses.html">Upcoming Courses</a>
+          <a href="upcomingcourses">Upcoming Courses</a>
         </li>
       </ul>
 
@@ -44,13 +43,17 @@
         <div id="date"></div>
         <section class="topSection">
           <div class="homeLogFlex">
-            <h5><a href="home.html">HOME</a></h5>
+            <div class="breadcrumbs">
+              <h5><a href="home.html">HOME</a></h5>
+              <p>> ACADEMIC SERVICES ></p>
+              <a href="" class="lastcrumb">ACADEMIC DASHBOARD</a>
+            </div>
             <div class="settingLog">
               <h4><a href="settings.html" class="settingsLink">SETTINGS</a></h4>
               <p>|</p>
               <h5><a id="logOutButton">LOG OUT?</a></h5>
             </div>
-        </div>
+          </div>
         </section>
         <div class="blueBar">
         </div>
@@ -76,7 +79,7 @@
         </section>
       </header>
 
-      <div class="content contentIndex">
+      <div class="content">
 
         <div class="helpMenu" id="logOut">
           <div class="helpContent">
@@ -92,63 +95,15 @@
           </div>
         </div>
 
-        <section class="indexContentFlex">
-          <div>
-          <h2>PROGRAM ANNOUNCEMENTS:</h2>
-          <h3>Industry Panel: Friday, 1pm</h3>
-          <p>
-            Students should arrive to the auditorium by 12:45pm, with questions prepared to ask the panel.
-          </p>
-        </div>
-        <div>
-          <h2>UPCOMING DUE DATES:</h2>
-          <h2>11/15</h2>
-          <h3>Web Development I: JavaScript Fundamentals Test</h3>
-          <h2>12/15<h2>
-          <h3>Software Project I: Final Project due by 11:55pm EST</h3>
-        </div>
-        </section>
-        <div class="blueBar">
-        </div>
-        <section class="indexContentFlex">
-          <div>
-          <h2>COLLEGE ANNOUNCEMENTS:</h2>
-          <h3>Tutoring Availabile</h3>
-          <p>
-            Students may request free tutoring support in general education and program related courses at the Student Academic Center. Email <a href="mailto:tutoring@stevenscollege.edu" target="_blank" class="indexLinks">tutoring@stevenscollege.edu</a> to reserve a timeslot.
-          </p>
-          <h3>Internship Workshops</h3>
-          <p>
-            Learn how to register for &amp; utilize our college central netowrk to connect with job and internship opportunities. We’ll also provide you resources to connect with companies in your hometown for summer internships. RSVP by emailing <a href="mailto:internships@stevenscollege.edu." target="_blank" class="indexLinks">internships@stevenscollege.edu.</a>
-          </p>
-        </div>
-        <div class="padding"> <!-- this class is so I can put padding on just this box -->
-          <h2>UPCOMING EVENTS:</h2>
 
-          <h2>11/15, 3:00pm</h2>
-          <h3>Math Study Group</h3>
 
-          <h2>11/15, 7:00pm</h2>
-          <h3>Intermural Dodgeball</h3>
 
-          <h2>11/15, 9:00pm</h2>
-          <h3>Movie Night</h3>
-
-          <h2>11/16, 8:00am</h2>
-          <h3>Coffee Talk</h3>
-
-          <h2>11/15, 7:00pm</h2>
-          <h3>Intermural Dodgeball</h3>
-
-          <h2>11/15, 9:00pm</h2>
-          <h3>Movie Night</h3>
-        </div>
-        </section>
       </div>
     </div>
   </div>
 
   <script src="../jquery-3.2.1.js"></script>
+  <script src="../progressbar.js"></script>
   <script src="../file.js"></script>
 </body>
 </html>
