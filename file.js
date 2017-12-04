@@ -449,8 +449,42 @@ $('#changeAltPhoneButton').on('click', function(){
 
 
 
+// checks both emails entered to make sure they are in the right format
+function verifyEmail(email1, email2){
+  var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  if(reg.test(email1.value) === true && reg.test(email2.value)){
+    return true;
+  }
+}
+
 $('#addressEdit').on('click', function(){
   $('#changeAddress').toggle();
+});
+$('#changeEmailButton').on('click', function(){
+  var email1 = document.getElementById('email1');
+  var email2 = document.getElementById('email2');
+
+  verifyEmail(email1, email2);
+  // empty values
+  if(email1.value === '' || email2.value === ''){
+    $('.invalidMessage').text('Email Address Missing');
+    $('input').css("border", "1px solid #d0021b");
+  }
+  // not matching emails
+  else if(email1.value != email2.value){
+    $('.invalidMessage').text('Email Address Not The Same');
+    $('input').css("border", "1px solid #d0021b");
+  }
+  // emails are not in the right format
+  else if(verifyEmail(email1, email2) === false){
+    $('.invalidMessage').text('Wrong Format');
+    $('input').css("border", "1px solid #d0021b");
+  }
+  else if(email1.value == email2.value){
+    document.getElementById('altEmail').innerHTML = email1.value;
+    $('#changeAltEmail').toggle();
+  }
+
 })
 
 $('#schoolAddressEdit').on('click', function(){
