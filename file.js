@@ -63,11 +63,12 @@ if(page == "gradeandreporting.html"){
   };
 }
 
+if(page == 'currentschedule.html'){
 
 // hides the weekly schedule at page load
-$('.calendar').hide();
+$('.schedule').hide();
 // changes course list button to highlighted
-$('.courseList').addClass('activeCourseNav');
+$('.courseCalendar').addClass('activeCourseNav');
 
 // while clicked it will toggle the display between the list and calendar and also change the highlighted link
 $('.courseList, .courseCalendar').on('click',
@@ -76,7 +77,7 @@ function()
   $('.schedule, .calendar').toggle();
   $('.courseList, .courseCalendar').toggleClass('activeCourseNav');
 });
-
+}
 var percentage = 50;
 
 // hides the various popup menus until they're needed
@@ -624,3 +625,6 @@ if(page == "dashboard.html"){
     }
   };
 }
+$("#viewcalendar").on('click', function(){
+  window.location.href = "currentschedule.html";
+})
