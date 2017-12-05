@@ -4,6 +4,8 @@ var page = path.split("/").pop();
 console.log( page );
 
 
+
+
 // gets the date through javascript
 var date = new Date();
 var year = date.getFullYear();    //will store the year
@@ -22,6 +24,8 @@ var dayOfWeek = dayList[date.getDay()];
 var fullDate = dayOfWeek + ", " + monthName + " " + day + ", " + year;
 console.log(fullDate);
 document.getElementById("date").innerHTML = fullDate;
+
+
 
 
 // determines if its the grades and reporting page
@@ -63,6 +67,9 @@ if(page == "gradeandreporting.html"){
   };
 }
 
+
+
+
 if(page == 'currentschedule.html'){
 
 // hides the weekly schedule at page load
@@ -96,6 +103,8 @@ $('.startButton').on('click', function(){
   $('.progressPercent').text(percentage + "%");
   $('.coreCourse').slideDown();
 });
+
+
 
 
 // will store all the courseName objects
@@ -225,6 +234,9 @@ function checkENG(){
   }
 }
 
+
+
+
 function displayCourses(){
   // document.getElementById('regMenu').innerHTML = courseArray;
   for(var a=0; a < courseArray.length; a++){
@@ -240,6 +252,9 @@ function displayCourses(){
     document.getElementById('regMenu').appendChild(pee);
   }
 }
+
+
+
 
 $('.coreButton').click(function () {
   // determines if one or more of the checkboxes are checked, won't proceed until it does
@@ -295,6 +310,9 @@ $('.ENGButton').on('click', function(){
   }
 });
 
+
+
+
 if(page == "upcomingcourses.html"){
   // this code will fill the progress bar depending on the provided percentage
   // example found at
@@ -324,6 +342,25 @@ if(page == "upcomingcourses.html"){
   var unavailableMenu = document.getElementById('unavailableMenu');
   var otherButton = document.getElementById('otherMenuButton');
 
+  window.onclick = function(event) {
+    if (event.target == helpMenu) {
+        $('#helpMenu').fadeOut();
+    }
+    else if (event.target == otherMenu) {
+        $('#otherMenu').fadeOut();
+    }
+    else if (event.target == otherMenu2) {
+        $('#otherMenu2').fadeOut();
+    }
+    else if (event.target == changeMenu) {
+        $('#changeMenu').fadeOut();
+    }
+    else if (event.target == unavailableMenu) {
+        $('#unavailableMenu').fadeOut();
+    }
+  }
+
+
 
   // displays the help menu when clicked
   helpBtn.onclick = function(){
@@ -332,7 +369,6 @@ if(page == "upcomingcourses.html"){
 
   otherButton.onclick = function(){
     otherMenu.style.display = "none";
-    // otherMenu2.style.display = "block";
     $('#otherMenu2').show();
   }
 
@@ -444,6 +480,7 @@ $('#changePhoneButton').on('click', function(){
 $('#confirmButtonPhone').on('click', function(){
   $('#phoneConfirm').toggle();
 });
+
 
 
 
@@ -600,8 +637,8 @@ if(page == "dashboard.html"){
     function createCircleProgress(divClass){
       var circle = new ProgressBar.Circle('.'+divClass, {
         color: startColor,
-        duration: 3000,
-        easing: 'bounce',
+        duration: 1500,
+        // easing: 'bounce',
         strokeWidth: 7,
         trailWidth: 7,
 
@@ -625,6 +662,8 @@ if(page == "dashboard.html"){
     }
   };
 }
+
+// loads the current schedule page with the calendar once the link is clicked on the dashboard page
 $("#viewcalendar").on('click', function(){
   window.location.href = "currentschedule.html";
 })
