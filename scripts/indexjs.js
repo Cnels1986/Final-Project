@@ -1,31 +1,27 @@
 $("#forgotPasswordButton").on("click", function(){
-  $("#forgotPassword1").toggle();
+  $(".invalidMessage").text("");
+  $(".invalidWrong").text("");
+  $('input').css("border", "1px solid #3bb9ba");
+  $("#forgotPassword1").slideDown();
 })
+
+
+// sets the progress bar for the pop up to 1
 var progress = 1;
 
+
+// determines if "@stevenscollege.edu" is found in the given email
 function split(str){
   var email = str.value;
   email.toLowerCase();
   if(email.includes("@stevenscollege.edu") === true)
     return true; else return false;
 }
-function move(){
-  var elem = document.getElementById("indexProgressFill");
-  var width = 1;
-  var id = setInterval(frame, 10);
-  function frame(){
-    if(width >= 100){
-      clearInterval(id);
-    }else if(width < progress){
-      width++;
-      elem.style.width = width + "%";
-    }
-  }
-}
 
 
 
 
+// checks to see if there's an email address and password also if the email address is correct... if so it loads the homepage, if not throws up error
 $(".loginSubmitButton").on("click", function(){
   var email = document.getElementById("loginEmail");
   var password = document.getElementById("loginPassword");
@@ -38,9 +34,12 @@ $(".loginSubmitButton").on("click", function(){
   }else if (split(email) === true && password.value != "") {
     window.location.href = "pages/home.html";
   }
+});
 
-})
 
+
+
+// popup to find user's email address
 $("#indexSubmit").on("click", function(){
   var email = document.getElementById("emailAddress");
   if(email.value === '' || split(email) === false){
@@ -53,6 +52,7 @@ $("#indexSubmit").on("click", function(){
     $("#forgotPassword2").toggle();
     $(".invalidMessage").text("");
     $('input').css("border", "1px solid #3bb9ba");
+    // creates initial progress bar on popup
     var bar = new ProgressBar.Line(indexProgress1, {
       strokeWidth: 3,
       easing: 'easeInOut',
@@ -65,17 +65,25 @@ $("#indexSubmit").on("click", function(){
     bar.animate(.33);
   }
 });
+
+
+
+// popup to find the street user grew up on, orange street or orange st are acceptable
 $("#streetSubmit").on("click", function(){
   var street = document.getElementById("streetQuestion");
-  if(street.value === "" || street.value !== "orange street"){
-    $(".invalidMessage").text("wrong");
+  var temp = street.value;
+  var lowerStreet = temp.toLowerCase();
+  console.log(lowerStreet);
+  if(lowerStreet === "" || (lowerStreet !== "orange street" && lowerStreet !== "orange st")){
+    $(".invalidMessage").text("Incorrect Answer");
     $('input').css("border", "1px solid #d0021b");
     $('.helpContent').effect('shake');
-  }else if(street.value === "orange street"){
+  }else if(lowerStreet === "orange street" || lowerStreet === "orange st"){
     $("#forgotPassword2").toggle();
     $("#forgotPassword3").toggle();
     $(".invalidMessage").text("");
     $('input').css("border", "1px solid #3bb9ba");
+    // updates progress bar on popup
     var bar = new ProgressBar.Line(indexProgress2, {
       strokeWidth: 3,
       easing: 'easeInOut',
@@ -87,19 +95,25 @@ $("#streetSubmit").on("click", function(){
     });
     bar.animate(.66);
   }
-
 });
+
+
+
+// popup finds the users favorite color, maroon is only acceptable answer
 $("#colorSubmit").on("click", function(){
   var color = document.getElementById("colorQuestion");
-  if(color.value === "" || color.value !== "maroon"){
-    $(".invalidMessage").text("wrong");
+  var temp = color.value;
+  var lowerColor = temp.toLowerCase();
+  if(lowerColor === "" || lowerColor !== "maroon"){
+    $(".invalidMessage").text("Incorrect Answer");
     $('input').css("border", "1px solid #d0021b");
     $('.helpContent').effect('shake');
-  }else if(color.value === "maroon"){
+  }else if(lowerColor === "maroon"){
     $("#forgotPassword3").toggle();
     $("#forgotPassword4").toggle();
     $(".invalidMessage").text("");
     $('input').css("border", "1px solid #3bb9ba");
+    // updates progress bar on popup
     var bar = new ProgressBar.Line(indexProgress3, {
       strokeWidth: 3,
       easing: 'easeInOut',
@@ -111,11 +125,15 @@ $("#colorSubmit").on("click", function(){
     });
     bar.animate(1.0);
   }
-
 });
+
+
+
+
+// final popup box, hides display once either button is pressed
 $("#finalBox").on("click", function(){
-  $("#forgotPassword4").toggle();
+  $("#forgotPassword4").slideUp();
 });
 $(".resendEmail").on("click", function(){
-  $("#forgotPassword4").toggle();
+  $("#forgotPassword4").slideUp();
 });
