@@ -110,3 +110,6 @@ $("#colorSubmit").on("click", function(){
 $("#finalBox").on("click", function(){
   $("#forgotPassword4").toggle();
 });
+$(".resendEmail").on("click", function(){
+  $("#forgotPassword4").toggle();
+});
