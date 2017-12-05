@@ -595,7 +595,7 @@ if(page == "dashboard.html"){
   // plugin found at:
   // https://kimmobrunfeldt.github.io/progressbar.js/
   window.onload = function onLoad() {
-    var progressCircles =["dashCircle1"]
+    var progressCircles =["dashCircle1", "dashCircle2", "dashCircle3", "dashCircle4", "dashCircle5", "dashCircle6"]
     function createCircleProgress(divClass){
       var circle = new ProgressBar.Circle('.'+divClass, {
         color: startColor,

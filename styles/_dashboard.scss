@@ -11,18 +11,20 @@
   flex-direction: row;
 }
 
-.academicStanding{
-  width: 66%;
+.gradeContainer{
+  height: 275px;
+  width: 215px;
+  background-color: white;
+  margin: 0px 20px 20px 0px;
+}
 
+.academicStanding{
+  width: 70%;
   h2{
     padding-bottom: 20px;
   }
   div{
-    height: 275px;
-    width: 215px;
-    background-color: white;
-
-    display: inline-block;
+    // display: inline-block;
     // margin: 0 15px 15px 0;
     h3{
       @include text($mont,$headerBlack, 12px);
@@ -46,8 +48,8 @@
 }
 
 .dashboardSideBar{
-  width: 30%;
-  padding-left: 20px;
+  width: 27%;
+
 }
 .duedate{
   padding-top: 45px;
@@ -68,4 +70,22 @@
     @include text($mont,$headerBlack, 12px);
     font-weight: bold;
     float: right;
+}
+
+.dashCircle1, .dashCircle2, .dashCircle3, .dashCircle4, .dashCircle5, .dashCircle6{
+  height: 150px;
+  width: 150px;
+  padding: 35px 0px 20px 32px;
+  position: relative;
+}
+
+.currentgrade{
+  position: absolute;
+  right: 20px;
+  top: 75px;
+}
+.flexdash{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
