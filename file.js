@@ -585,3 +585,42 @@ $('#changeSchoolAddressButton').on('click', function(){
 $('#confirmButtonSchool').on('click', function(){
   $('#schoolAddressConfirm').toggle();
 });
+
+
+if(page == "dashboard.html"){
+  var startColor = '#d8d8d8';
+  var endColor = '#33c7ba';
+
+  // creates the circular progress bar on the page load
+  // plugin found at:
+  // https://kimmobrunfeldt.github.io/progressbar.js/
+  window.onload = function onLoad() {
+    var progressCircles =["dashCircle1"]
+    function createCircleProgress(divClass){
+      var circle = new ProgressBar.Circle('.'+divClass, {
+        color: startColor,
+        duration: 3000,
+        easing: 'bounce',
+        strokeWidth: 7,
+        trailWidth: 7,
+
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+          circle.path.setAttribute('stroke', state.color);
+        }
+      });
+
+      // This will get the number from the page
+      var value = ($('.'+divClass).attr('value') / 100);
+
+      // This will determine the circumference of the circle
+      circle.animate(value, {
+        from: {color: startColor},
+        to: {color: endColor}
+      });
+    }
+    for(var i=0;i<progressCircles.length;i++){
+      createCircleProgress(progressCircles[i]);
+    }
+  };
+}
