@@ -37,3 +37,9 @@
   text-decoration: none;
   @include text($robo, $grades, 13px);
 }
+.resendEmail{
+  margin-top: 46px;
+  @include text($mont, #3bb9ba, 12px);
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}

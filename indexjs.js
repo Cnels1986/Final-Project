@@ -51,6 +51,8 @@ $("#indexSubmit").on("click", function(){
     progress = 33;
     $("#forgotPassword1").toggle();
     $("#forgotPassword2").toggle();
+    $(".invalidMessage").text("");
+    $('input').css("border", "1px solid #3bb9ba");
     var bar = new ProgressBar.Line(indexProgress1, {
       strokeWidth: 3,
       easing: 'easeInOut',
@@ -65,13 +67,15 @@ $("#indexSubmit").on("click", function(){
 });
 $("#streetSubmit").on("click", function(){
   var street = document.getElementById("streetQuestion");
-  if(street.value === ""){
+  if(street.value === "" || street.value !== "orange street"){
     $(".invalidMessage").text("wrong");
     $('input').css("border", "1px solid #d0021b");
     $('.helpContent').effect('shake');
   }else if(street.value === "orange street"){
     $("#forgotPassword2").toggle();
     $("#forgotPassword3").toggle();
+    $(".invalidMessage").text("");
+    $('input').css("border", "1px solid #3bb9ba");
     var bar = new ProgressBar.Line(indexProgress2, {
       strokeWidth: 3,
       easing: 'easeInOut',
@@ -87,13 +91,15 @@ $("#streetSubmit").on("click", function(){
 });
 $("#colorSubmit").on("click", function(){
   var color = document.getElementById("colorQuestion");
-  if(color.value === ""){
+  if(color.value === "" || color.value !== "maroon"){
     $(".invalidMessage").text("wrong");
     $('input').css("border", "1px solid #d0021b");
     $('.helpContent').effect('shake');
   }else if(color.value === "maroon"){
     $("#forgotPassword3").toggle();
     $("#forgotPassword4").toggle();
+    $(".invalidMessage").text("");
+    $('input').css("border", "1px solid #3bb9ba");
     var bar = new ProgressBar.Line(indexProgress3, {
       strokeWidth: 3,
       easing: 'easeInOut',
@@ -108,5 +114,8 @@ $("#colorSubmit").on("click", function(){
 
 });
 $("#finalBox").on("click", function(){
+  $("#forgotPassword4").toggle();
+});
+$(".resendEmail").on("click", function(){
   $("#forgotPassword4").toggle();
 });
