@@ -1,3 +1,5 @@
+@import "variables";
+
 .smallFlex{
   width: 100%;
 }
@@ -17,7 +19,7 @@
     h1{
       @include text($mont, $headerBlack, 24px);
       text-align: center;
-      padding: 60px 0px 12px 0px;
+      padding: 60px 5% 12px 5%;
       font-weight: bold;
     }
     h2{
@@ -33,9 +35,14 @@
         height: 48px;
         margin: 0px auto 0px auto;
         text-align: center;
-        @include text($mont, $popupButton, 16px);
+        @include text($mont, $headerBlack, 16px);
         margin-top: 5px;
         border: $popupButton 1px solid;
+      }
+      input::placeholder{
+        color: $popupButton;
+        padding-left: 10px;
+        font-size: 16px;
       }
     }
     .loginOther{
@@ -53,7 +60,7 @@
       p:nth-child(1){
         @include text($mont, white, 16px);
         text-align: center;
-        padding-top: 15px;
+        padding-top: 17px;
 
 
       }
@@ -64,20 +71,6 @@
     }
   }
 }
-}
-.invalidInput{
-  .invalidMessage{
-    color: red;
-  }
-}
-#indexProgressTrack{
-  width: 100%;
-  background-color: #4a4a4a;
-}
-#indexProgressFill{
-  width: 1%;
-  height: 8px;
-  background-color: $progressBarBackGround;
 }
 
 .progress{

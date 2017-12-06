@@ -78,13 +78,13 @@ $('.schedule').hide();
 $('.courseCalendar').addClass('activeCourseNav');
 
 // while clicked it will toggle the display between the list and calendar and also change the highlighted link
-$('.courseList, .courseCalendar').on('click',
-function()
-{
+$('.courseList, .courseCalendar').on('click', function(){
   $('.schedule, .calendar').toggle();
   $('.courseList, .courseCalendar').toggleClass('activeCourseNav');
 });
 }
+
+// percentage for the progress bar animation
 var percentage = 50;
 
 // hides the various popup menus until they're needed
@@ -103,6 +103,7 @@ $('.startButton').on('click', function(){
   $('.progressPercent').text(percentage + "%");
   $('.coreCourse').slideDown();
 });
+
 
 
 
@@ -234,9 +235,6 @@ function checkENG(){
   }
 }
 
-
-
-
 function displayCourses(){
   // document.getElementById('regMenu').innerHTML = courseArray;
   for(var a=0; a < courseArray.length; a++){
@@ -252,6 +250,7 @@ function displayCourses(){
     document.getElementById('regMenu').appendChild(pee);
   }
 }
+
 
 
 
@@ -624,6 +623,16 @@ $('#confirmButtonSchool').on('click', function(){
   $('#schoolAddressConfirm').toggle();
 });
 
+// javascript for the save settings button
+$('#saveSettings').on('click', function(){
+  $("#settingsPopup").slideDown();
+});
+$('#closeSettings').on('click', function(){
+  $('#settingsPopup').slideUp();
+});
+
+
+
 
 if(page == "dashboard.html"){
   var startColor = '#d8d8d8';
@@ -666,4 +675,4 @@ if(page == "dashboard.html"){
 // loads the current schedule page with the calendar once the link is clicked on the dashboard page
 $("#viewcalendar").on('click', function(){
   window.location.href = "currentschedule.html";
-})
+});

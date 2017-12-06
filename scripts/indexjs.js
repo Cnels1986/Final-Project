@@ -18,6 +18,11 @@ function split(str){
     return true; else return false;
 }
 
+function resetPopup(){
+  $(".invalidMessage").text("");
+  $('input').css("border", "1px solid #3bb9ba");
+}
+
 
 
 
@@ -42,16 +47,24 @@ $(".loginSubmitButton").on("click", function(){
 // popup to find user's email address
 $("#indexSubmit").on("click", function(){
   var email = document.getElementById("emailAddress");
-  if(email.value === '' || split(email) === false){
+  // if nothing was entered
+  if(email.value === ''){
     $(".helpContent").effect("shake");
-    $(".invalidMessage").text("wrong");
+    $(".invalidMessage").text("Nothing Entered");
     $('input').css("border", "1px solid #d0021b");
-  }else if (split(email) === true) {
+  }
+  // if the wrong email was entered
+  else if(split(email) === false){
+    $(".helpContent").effect("shake");
+    $(".invalidMessage").text("Wrong");
+    $('input').css("border", "1px solid #d0021b");
+  }
+  // if the correct email was entered, displays next popup
+  else if(split(email) === true) {
     progress = 33;
     $("#forgotPassword1").toggle();
     $("#forgotPassword2").toggle();
-    $(".invalidMessage").text("");
-    $('input').css("border", "1px solid #3bb9ba");
+    resetPopup();
     // creates initial progress bar on popup
     var bar = new ProgressBar.Line(indexProgress1, {
       strokeWidth: 3,
@@ -74,15 +87,23 @@ $("#streetSubmit").on("click", function(){
   var temp = street.value;
   var lowerStreet = temp.toLowerCase();
   console.log(lowerStreet);
-  if(lowerStreet === "" || (lowerStreet !== "orange street" && lowerStreet !== "orange st")){
+  // input is empty
+  if(lowerStreet === ""){
+    $(".invalidMessage").text("Nothing Entered");
+    $('input').css("border", "1px solid #d0021b");
+    $('.helpContent').effect('shake');
+  }
+  // wrong answer entered
+  else if(lowerStreet !== "orange street" && lowerStreet !== "orange st"){
     $(".invalidMessage").text("Incorrect Answer");
     $('input').css("border", "1px solid #d0021b");
     $('.helpContent').effect('shake');
-  }else if(lowerStreet === "orange street" || lowerStreet === "orange st"){
+  }
+  // correct answer, new popup is displayed
+  else if(lowerStreet === "orange street" || lowerStreet === "orange st"){
     $("#forgotPassword2").toggle();
     $("#forgotPassword3").toggle();
-    $(".invalidMessage").text("");
-    $('input').css("border", "1px solid #3bb9ba");
+    resetPopup();
     // updates progress bar on popup
     var bar = new ProgressBar.Line(indexProgress2, {
       strokeWidth: 3,
@@ -104,15 +125,19 @@ $("#colorSubmit").on("click", function(){
   var color = document.getElementById("colorQuestion");
   var temp = color.value;
   var lowerColor = temp.toLowerCase();
-  if(lowerColor === "" || lowerColor !== "maroon"){
+  if(lowerColor === ""){
+    $(".invalidMessage").text("Nothing Entered");
+    $('input').css("border", "1px solid #d0021b");
+    $('.helpContent').effect('shake');
+  }
+  else if(lowerColor !== "maroon"){
     $(".invalidMessage").text("Incorrect Answer");
     $('input').css("border", "1px solid #d0021b");
     $('.helpContent').effect('shake');
   }else if(lowerColor === "maroon"){
     $("#forgotPassword3").toggle();
     $("#forgotPassword4").toggle();
-    $(".invalidMessage").text("");
-    $('input').css("border", "1px solid #3bb9ba");
+    resetPopup();
     // updates progress bar on popup
     var bar = new ProgressBar.Line(indexProgress3, {
       strokeWidth: 3,
