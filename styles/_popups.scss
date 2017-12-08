@@ -131,7 +131,7 @@ textarea{
     font-size: 16px;
   }
   input{
-    @include text($mont, $popupButton, 16px);
+    @include text($mont, $headerBlack, 16px);
     padding-left: 5px;
   }
 }
