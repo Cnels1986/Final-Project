@@ -1,3 +1,10 @@
+@import "variables";
+// Takes in font variable, color variable, font size
+@mixin text($font, $color, $size){
+  font-family: $font;
+  color: $color;
+  font-size: $size;
+}
 //this whole page is jut for the flexing that we needed around the site.
 .bigFlex{ //the smallflex and bigflex are for the to flex the header, content, and aside.
   display: flex;
@@ -35,6 +42,21 @@
   .padding{
     margin-right: 13.950em;
   }
+  h2{
+    @include text($mont, $headerHeader, 12px);
+    font-weight: bold;
+    padding: 10px 0px;
+  }
+  h3{
+    @include text($mont, $headerBlack, 15px);
+    padding-bottom: 8px;
+    line-height: 1.4;
+  }
+  p{
+    @include text($robo, $headerBlack,13px);
+    padding-bottom: 15px;
+    line-height: 1.6;
+  }
 }
 .buttonFlex3{//this is for the buttons on the general education pages
   display: flex;
@@ -43,4 +65,8 @@
   .buttonFlex2{ //this is becuase one of the buttons didnt want to work right so it was just pushed.
     padding-right: 100px;
   }
+}
+.shrinkduedate{
+  width: 70%;
+
 }
