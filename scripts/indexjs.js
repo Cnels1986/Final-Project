@@ -35,6 +35,7 @@ $(".loginSubmitButton").on("click", function(){
     $('input').css("border", "1px solid #d0021b");
     $('.loginBox').effect('shake');
   }else if(split(email) === false){
+    $('.loginBox').effect('shake');
     $(".invalidWrong").text("SUper duper wrong");
   }else if (split(email) === true && password.value != "") {
     window.location.href = "pages/home.html";
