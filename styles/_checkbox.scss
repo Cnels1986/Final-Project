@@ -1,4 +1,5 @@
-.coreCheckBoxes{ 
+/* This checkbox for all the pages with checkbox and if any change made will affect all the pages*/
+.coreCheckBoxes{
   h3{
     @include text($mont, $headerBlack, 14px);
     padding-bottom: 20px;
