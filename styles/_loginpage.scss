@@ -75,5 +75,8 @@
 
 .progress{
   width: 100%;
-
+  // sets the height of the progress bar (for internet explorer) and positions it to the top of the popup menu
+  position: relative;
+  top: -10px;
+  height: 8px;
 }

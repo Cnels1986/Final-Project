@@ -14,8 +14,15 @@ var progress = 1;
 function split(str){
   var email = str.value;
   email.toLowerCase();
-  if(email.includes("@stevenscollege.edu") === true)
-    return true; else return false;
+  
+  console.log(email.indexOf('@stevenscollege.edu'));
+  // indexOf returns -1 if the substring is not found
+  if(email.indexOf('@stevenscollege.edu') != "-1"){
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 function resetPopup(){
